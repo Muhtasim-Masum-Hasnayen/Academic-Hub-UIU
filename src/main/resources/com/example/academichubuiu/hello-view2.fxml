@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.HelloView2">
+   <children>
+      <TextField layoutX="259.0" layoutY="265.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Student ID" style="-fx-background-color: #E1F5FE;" />
+      <Button layoutX="260.0" layoutY="479.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Register">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+      </Button>
+      <PasswordField layoutX="260.0" layoutY="368.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
+      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="210.0" layoutY="-64.0">
+         <image>
+            <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="261.0" layoutY="149.0" text="Welcome to UIU Academic Hub">
+         <font>
+            <Font name="Impact" size="22.0" />
+         </font>
+      </Label>
+      <TextField layoutX="260.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="E-mail" style="-fx-background-color: #E1F5FE;" />
+      <PasswordField layoutX="258.0" layoutY="420.0" prefHeight="40.0" prefWidth="280.0" promptText="Confirm Password" style="-fx-background-color: #E1F5FE;" />
+      <Text layoutX="268.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Form">
+         <font>
+            <Font name="Times New Roman Bold" size="33.0" />
+         </font>
+      </Text>
+      <Button layoutX="650.0" layoutY="535.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: Black; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

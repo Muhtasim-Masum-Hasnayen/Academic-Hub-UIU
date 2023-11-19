@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.HelloController">
+   <children>
+      <Pane layoutX="400.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;">
+         <children>
+            <TextField layoutX="51.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Student ID" style="-fx-background-color: #E1F5FE;" />
+            <Label layoutX="52.0" layoutY="282.0" text="Sign in to continue" textFill="#a99797">
+               <font>
+                  <Font name="Ebrima Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="398.0" onMouseClicked="#goToScene3" text="Forget Password ?" textFill="#a99797">
+               <font>
+                  <Font name="Ebrima Bold" size="11.0" />
+               </font>
+            </Label>
+            <Button layoutX="52.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login">
+               <font>
+                  <Font name="Ebrima Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="60.0" layoutY="521.0" text="New User ?" textFill="#a99797">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="521.0" onMouseClicked="#goToScene2" text="Signup" textFill="#0721e3">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField layoutX="52.0" layoutY="358.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
+         </children>
+      </Pane>
+      <VBox alignment="CENTER" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: Orange;">
+         <children>
+            <ImageView fitHeight="255.0" fitWidth="358.0">
+               <image>
+                  <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Circle fx:id="c1" fill="#1ff8ff00" layoutX="596.0" layoutY="126.0" radius="107.0" stroke="RED" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 45;" />
+      <Circle fx:id="c2" fill="#1ff8ff00" layoutX="596.0" layoutY="125.0" radius="81.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 60;" />
+      <ImageView fitHeight="69.0" fitWidth="76.0" layoutX="557.0" layoutY="89.0">
+         <image>
+            <Image url="@Only%20logo%20of%20UIU.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="c3" fill="#1ff8ff00" layoutX="595.0" layoutY="125.0" radius="55.0" stroke="#29d406" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 50;" />
+      <Label layoutX="455.0" layoutY="252.0" text="Welcome to UIU Academic Hub">
+         <font>
+            <Font name="Impact" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
