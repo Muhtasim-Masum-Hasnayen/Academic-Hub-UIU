@@ -27,7 +27,7 @@
                   <Font name="Ebrima Bold" size="11.0" />
                </font>
             </Label>
-            <Button layoutX="52.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login">
+            <Button layoutX="52.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToScene4" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login">
                <font>
                   <Font name="Ebrima Bold" size="16.0" />
                </font>

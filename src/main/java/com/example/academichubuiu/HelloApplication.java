@@ -21,8 +21,5 @@ public class HelloApplication extends Application {
         launch();
     }
 }
-//Edited file
-//Hasib
-//hellooooooooo
-//Hasib Bhai
+
     
