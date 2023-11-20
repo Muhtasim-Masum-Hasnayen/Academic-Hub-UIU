@@ -18,7 +18,7 @@ public class HomePage {
     @FXML
     public void calculator(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cgpaCalculator.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sample.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 
