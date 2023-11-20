@@ -59,7 +59,7 @@ public class LoginPage implements Initializable {
     private Parent root;
 
     @FXML
-    public void goToScene2(MouseEvent event) throws IOException
+    public void goToRegistrationPage(MouseEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Registration.fxml"));
         root = fxmlLoader.load();
@@ -69,7 +69,7 @@ public class LoginPage implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void goToScene3(MouseEvent event) throws IOException
+    public void goToForgetPassPage(MouseEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ForgetPassword.fxml"));
         root = fxmlLoader.load();
@@ -79,7 +79,7 @@ public class LoginPage implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void HomePage(ActionEvent event) throws IOException
+    public void goToHomePage(ActionEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
         root = fxmlLoader.load();

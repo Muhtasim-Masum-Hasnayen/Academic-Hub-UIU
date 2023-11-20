@@ -22,12 +22,12 @@
                   <Font name="Ebrima Bold" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="238.0" layoutY="398.0" onMouseClicked="#goToScene3" text="Forget Password ?" textFill="#a99797">
+            <Label layoutX="238.0" layoutY="398.0" onMouseClicked="#goToForgetPassPage" text="Forget Password ?" textFill="#a99797">
                <font>
                   <Font name="Ebrima Bold" size="11.0" />
                </font>
             </Label>
-            <Button layoutX="52.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HomePage" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login" textFill="WHITE">
+            <Button layoutX="52.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Ebrima Bold" size="16.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Font name="Ebrima Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="132.0" layoutY="521.0" onMouseClicked="#goToScene2" text="Signup" textFill="#0721e3">
+            <Label layoutX="132.0" layoutY="521.0" onMouseClicked="#goToRegistrationPage" text="Signup" textFill="#0721e3">
                <font>
                   <Font name="Ebrima Bold" size="12.0" />
                </font>
