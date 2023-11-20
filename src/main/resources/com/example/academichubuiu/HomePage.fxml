@@ -19,7 +19,37 @@
             <Font name="Impact" size="22.0" />
          </font>
       </Label>
-      <Button layoutX="625.0" layoutY="213.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#calculator" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="CGPA Calculator" textFill="WHITE">
+      <Button layoutX="580.0" layoutY="213.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#calculator" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="CGPA Calculator" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="578.0" layoutY="249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Task Management" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="579.0" layoutY="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Note" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="580.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="580.0" layoutY="356.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Assignments' Marks" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="580.0" layoutY="391.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="CT's Marks" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="580.0" layoutY="427.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Counselling Schedule" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
