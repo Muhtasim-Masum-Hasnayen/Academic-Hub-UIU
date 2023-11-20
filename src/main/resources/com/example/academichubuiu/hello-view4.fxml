@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.HelloView4">
    <children>
       <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="221.0" layoutY="-60.0">
@@ -25,5 +24,6 @@
             <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
+      <Button layoutX="161.0" layoutY="230.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="187.0" text="CGPA Calculator" />
    </children>
 </AnchorPane>
