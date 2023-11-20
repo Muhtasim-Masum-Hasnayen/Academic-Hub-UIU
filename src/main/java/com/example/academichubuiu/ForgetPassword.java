@@ -1,4 +1,4 @@
 package com.example.academichubuiu;
 
-public class HelloView4 {
+public class ForgetPassword {
 }

@@ -9,7 +9,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -18,7 +17,7 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-public class HelloController implements Initializable {
+public class LoginPage implements Initializable {
     @FXML
     private Circle c1;
 
@@ -62,7 +61,7 @@ public class HelloController implements Initializable {
     @FXML
     public void goToScene2(MouseEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Registration.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 
@@ -72,7 +71,7 @@ public class HelloController implements Initializable {
     }
     public void goToScene3(MouseEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view3.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ForgetPassword.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 
@@ -80,9 +79,9 @@ public class HelloController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void goToScene4(ActionEvent event) throws IOException
+    public void HomePage(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view4.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 

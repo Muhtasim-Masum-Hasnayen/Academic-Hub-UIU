@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloView2 {
+public class Registration {
     @FXML
     private Stage stage;
     private Scene scene;
@@ -18,7 +18,7 @@ public class HelloView2 {
     @FXML
     public void goTologinpage(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 

@@ -1,4 +1,4 @@
 package com.example.academichubuiu;
 
-public class HelloView3 {
+public class HomePage {
 }
