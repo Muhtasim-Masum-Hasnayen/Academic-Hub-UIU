@@ -13,7 +13,9 @@ import java.io.IOException;
 public class ForgetPassword {
     @FXML
     private Stage stage;
+    @FXML
     private Scene scene;
+    @FXML
     private Parent root;
     @FXML
     public void goTologinpage(ActionEvent event) throws IOException

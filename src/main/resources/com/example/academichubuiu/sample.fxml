@@ -49,5 +49,10 @@
                </font>
             </Label>
          </children></AnchorPane>
+      <Button layoutX="814.0" layoutY="629.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goTohomepage" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: maroon; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package com.example.academichubuiu;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HomePage {
+public class NoteController extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+
+
+    }
     @FXML
     private Stage stage;
     @FXML
@@ -18,20 +29,9 @@ public class HomePage {
     @FXML
     private Parent root;
     @FXML
-    public void calculator(ActionEvent event) throws IOException
+    public void goTohomepage(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sample.fxml"));
-        root = fxmlLoader.load();
-        scene = new Scene(root);
-
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
-    @FXML
-    public void note(ActionEvent event) throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Note.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 
