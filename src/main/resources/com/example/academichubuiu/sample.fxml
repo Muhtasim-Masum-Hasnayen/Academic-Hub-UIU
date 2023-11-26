@@ -24,11 +24,6 @@
                   <Font size="21.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="286.0" mnemonicParsing="false" onAction="#exitbutton" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: maroon; -fx-background-radius: 90;" text="Exit" textFill="#fcfcfc">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Button>
             <Button fx:id="refresh" layoutX="26.0" layoutY="229.0" mnemonicParsing="false" onAction="#setRefresh" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: maroon; -fx-background-radius: 90;" text="Refresh" textFill="WHITE">
                <font>
                   <Font size="21.0" />
