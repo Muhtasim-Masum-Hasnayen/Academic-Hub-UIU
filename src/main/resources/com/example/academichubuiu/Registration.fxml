@@ -12,13 +12,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Registration">
    <children>
-      <TextField layoutX="259.0" layoutY="265.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Student ID" style="-fx-background-color: #E1F5FE;" />
-      <Button layoutX="260.0" layoutY="479.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Register">
+      <TextField fx:id="studentid" layoutX="259.0" layoutY="265.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Student ID" style="-fx-background-color: #E1F5FE;" />
+      <Button layoutX="260.0" layoutY="479.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerStudent" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Register">
          <font>
             <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
-      <PasswordField layoutX="260.0" layoutY="368.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
+      <PasswordField fx:id="password" layoutX="260.0" layoutY="368.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
       <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="210.0" layoutY="-64.0">
          <image>
             <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
@@ -29,8 +29,8 @@
             <Font name="Impact" size="22.0" />
          </font>
       </Label>
-      <TextField layoutX="260.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="E-mail" style="-fx-background-color: #E1F5FE;" />
-      <PasswordField layoutX="258.0" layoutY="420.0" prefHeight="40.0" prefWidth="280.0" promptText="Confirm Password" style="-fx-background-color: #E1F5FE;" />
+      <TextField fx:id="email" layoutX="260.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="E-mail" style="-fx-background-color: #E1F5FE;" />
+      <PasswordField fx:id="confirmpassword" layoutX="258.0" layoutY="420.0" prefHeight="40.0" prefWidth="280.0" promptText="Confirm Password" style="-fx-background-color: #E1F5FE;" />
       <Text layoutX="268.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Form">
          <font>
             <Font name="Times New Roman Bold" size="33.0" />

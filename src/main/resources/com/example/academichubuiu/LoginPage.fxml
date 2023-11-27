@@ -16,7 +16,7 @@
    <children>
       <Pane layoutX="400.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;">
          <children>
-            <TextField layoutX="51.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Student ID" style="-fx-background-color: #E1F5FE;" />
+            <TextField fx:id="studentid" layoutX="51.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Student ID" style="-fx-background-color: #E1F5FE;" />
             <Label layoutX="52.0" layoutY="282.0" text="Sign in to continue" textFill="#a99797">
                <font>
                   <Font name="Ebrima Bold" size="13.0" />
@@ -27,7 +27,7 @@
                   <Font name="Ebrima Bold" size="11.0" />
                </font>
             </Label>
-            <Button layoutX="52.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login" textFill="WHITE">
+            <Button layoutX="52.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginStudent" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Ebrima Bold" size="16.0" />
                </font>
@@ -42,7 +42,7 @@
                   <Font name="Ebrima Bold" size="12.0" />
                </font>
             </Label>
-            <PasswordField layoutX="52.0" layoutY="358.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
+            <PasswordField fx:id="password" layoutX="52.0" layoutY="358.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
          </children>
       </Pane>
       <VBox alignment="CENTER" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: Orange;">

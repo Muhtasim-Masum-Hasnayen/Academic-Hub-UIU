@@ -2,6 +2,7 @@ package com.example.academichubuiu;
 
 import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -17,6 +19,10 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.control.Alert;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 public class LoginPage implements Initializable {
     @FXML
     private Circle c1;
@@ -88,6 +94,59 @@ public class LoginPage implements Initializable {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    TextField studentid=new TextField();
+    @FXML
+    TextField password=new TextField();
+
+@FXML
+public void loginStudent(ActionEvent event) {
+    String mstudentId = studentid.getText();
+    String mpassword = password.getText();
+
+    boolean loginSuccessful = false;
+
+    try (BufferedReader reader = new BufferedReader(new FileReader("student_data.txt"))) {
+        String line;
+
+        // Read each line from the file
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(" ");
+            String studentId = parts[0];
+            String emailAddress = parts[1];
+            String password = parts[2];
+
+            // Check if provided credentials match any record in the file
+            if (mstudentId.equals(studentId) && mpassword.equals(password)) {
+                loginSuccessful = true;
+                break;
+            }
+        }
+
+    } catch (IOException e) {
+        System.err.println("Error reading from file: " + e.getMessage());
+    }
+
+    if (loginSuccessful) {
+        try {
+            goToHomePage(event);
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle the exception according to your needs
+        }
+    } else {
+        showMessage("Invalid credentials. Login failed.", "Login");
+    }
+}
+
+
+    private static void showMessage(String message, String title) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
 

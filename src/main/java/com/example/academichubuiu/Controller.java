@@ -37,12 +37,7 @@ public class Controller {
 
         public Button submit = new Button("Submit");
 
-
-        public void exitbutton() {
-            System.exit(0);
-        }
-
-        public void currentCGPA() {
+        public void currentCGPA()throws Exception {
             anchor_detail.getChildren().clear();
 
             final int[] y = {0};
