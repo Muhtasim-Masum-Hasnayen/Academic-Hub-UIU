@@ -136,7 +136,7 @@ public void loginStudent(ActionEvent event) {
             e.printStackTrace(); // Handle the exception according to your needs
         }
     } else {
-        showMessage("Invalid credentials. Login failed.", "Login");
+        showMessage("Invalid Information. Login failed.", "Login");
     }
 }
 
