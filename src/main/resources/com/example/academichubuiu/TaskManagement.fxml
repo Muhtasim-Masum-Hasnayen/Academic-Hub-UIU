@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #81D4FA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.TaskManagement">
+   <children>
+      <DatePicker fx:id="myDatePicker" layoutX="589.0" layoutY="191.0" onAction="#getDate" promptText="Enter a date" style="-fx-background-color: black;" />
+      <Label fx:id="myLabel" layoutX="664.0" layoutY="168.0" text="Date" textFill="#3e3636">
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="241.0" layoutY="-64.0">
+         <image>
+            <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text fill="#4e4545" layoutX="293.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Management System" underline="true" wrappingWidth="260.0">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="665.0" layoutY="548.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goTohomepage" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: white; -fx-background-radius: 90;" text="Back" textFill="#81d4fa">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

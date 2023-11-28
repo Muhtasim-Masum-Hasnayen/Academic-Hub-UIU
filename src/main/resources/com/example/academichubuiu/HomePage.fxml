@@ -24,7 +24,7 @@
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="306.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Task Management" textFill="WHITE">
+      <Button layoutX="306.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#TaskManagement" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Task Management" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
@@ -39,7 +39,7 @@
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="308.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Assignments' Marks" textFill="WHITE">
+      <Button layoutX="308.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#AssignmentsMarks" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Assignments' Marks" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
