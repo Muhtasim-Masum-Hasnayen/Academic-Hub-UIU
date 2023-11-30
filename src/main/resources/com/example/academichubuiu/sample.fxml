@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="stage1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Controller">
+<AnchorPane fx:id="stage1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: 0000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Controller">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9c2c2c" height="100.0" layoutX="117.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="6.0" width="756.0" />
       <AnchorPane layoutX="91.0" layoutY="75.0" prefHeight="391.0" prefWidth="202.0" style="-fx-background-color: 531D70;">
@@ -29,7 +29,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="anchor_detail" layoutX="425.0" layoutY="211.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="299.0" prefWidth="560.0">
+      <AnchorPane fx:id="anchor_detail" layoutX="425.0" layoutY="211.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="299.0" prefWidth="560.0" style="-fx-background-color: #6397eb;">
          <children>
             <Label fx:id="label" layoutX="26.0" layoutY="150.0" prefHeight="46.0" prefWidth="450.0" style="visibility: false;" text="Not Allowed to take more than 10 Course" textFill="WHITE">
                <font>

@@ -18,13 +18,16 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Academic Hub UIU");
         stage.setScene(scene);
-       // stage.setMaximized(true);
+        stage.setMaximized(false);
+        stage.setFullScreen(false);
+        stage.setResizable(false); // Disable resizing
+
         stage.show();
 
 
         Image uiu = null;
         try {
-            uiu = new Image(new FileInputStream("C:\\Users\\USER\\IdeaProjects\\Project\\AcademicHubUiu\\src\\main\\resources\\com\\example\\academichubuiu\\Icon UIU_Academic_Hub.png"));
+            uiu = new Image(new FileInputStream("D:\\javaProject\\src\\main\\resources\\com\\example\\academichubuiu\\Icon UIU_Academic_Hub.png"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
