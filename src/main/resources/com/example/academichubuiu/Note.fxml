@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #81D4FA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.NoteController">
    <children>
-      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="231.0" layoutY="-50.0">
+      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="231.0" layoutY="-50.0" AnchorPane.bottomAnchor="394.6" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="210.79999999999995" AnchorPane.topAnchor="-50.0">
          <image>
             <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
          </image>
@@ -26,7 +26,7 @@
             <Font name="Impact" size="32.0" />
          </font>
       </Text>
-      <TextArea layoutX="70.0" layoutY="268.0" prefHeight="200.0" prefWidth="326.0" promptText="                                                                                                                                         Write here" style="-fx-background-color: #81D4FA;">
+      <TextArea layoutX="70.0" layoutY="268.0" prefHeight="200.0" prefWidth="326.0" promptText="                                                                                                                                         Write here" style="-fx-background-color: #81D4FA;" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="403.20000000000005">
          <font>
             <Font size="19.0" />
          </font>
