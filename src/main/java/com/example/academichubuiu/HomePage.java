@@ -52,7 +52,7 @@ public class HomePage {
     }
     public void TaskManagement(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TaskManagement.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainWindow.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 

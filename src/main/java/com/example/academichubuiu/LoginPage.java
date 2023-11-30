@@ -49,7 +49,7 @@ public class LoginPage implements Initializable {
         rt.setByAngle(angle);
         rt.setDelay(Duration.seconds(0));
         rt.setRate(3);
-        rt.setCycleCount(18);
+        rt.setCycleCount(100);
         rt.play();
     }
 
