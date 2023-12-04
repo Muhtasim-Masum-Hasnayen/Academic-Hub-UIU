@@ -110,6 +110,7 @@ public class LoginPage implements Initializable {
 
     @FXML
     public void loginStudent(ActionEvent event) {
+
         if (mybox.getValue().equals("Student")){
             String mstudentId = studentid.getText();
         String mpassword = password.getText();
@@ -148,13 +149,57 @@ public class LoginPage implements Initializable {
         }
     }
         else{
+            String mstudentId = studentid.getText();
+            String mpassword = password.getText();
 
-            showMessage("Invalid Faculty Information. Login failed.", "Login");
+            boolean loginSuccessful = false;
+
+            try (BufferedReader reader = new BufferedReader(new FileReader("Faculty_data.txt"))) {
+                String line;
+
+                // Read each line from the file
+                while ((line = reader.readLine()) != null) {
+                    String[] parts = line.split(" ");
+                    String studentId = parts[0];
+                    String emailAddress = parts[1];
+                    String password = parts[2];
+
+                    // Check if provided credentials match any record in the file
+                    if (mstudentId.equals(studentId) && mpassword.equals(password)) {
+                        loginSuccessful = true;
+                        break;
+                    }
+                }
+
+            } catch (IOException e) {
+                System.err.println("Error reading from file: " + e.getMessage());
+            }
+
+            if (loginSuccessful) {
+                try {
+                    goToTeacherPage(event);
+                } catch (IOException e) {
+                    e.printStackTrace(); // Handle the exception according to your needs
+                }
+            } else {
+                showMessage("Invalid Faculty Information. Login failed.", "Login");
+            }
+
+
 
         }
 
 
 }
+    public void goToTeacherPage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
     public static void showMessage(String message, String title) {
