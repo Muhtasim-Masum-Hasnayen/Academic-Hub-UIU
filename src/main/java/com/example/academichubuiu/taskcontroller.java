@@ -214,7 +214,7 @@ public class taskcontroller {
             todoListView.getSelectionModel().select(selectedItem);
         }
     }
-
+//solved
     @FXML
     public void handleExit(){
         Platform.exit();
