@@ -44,7 +44,7 @@
                </font>
             </Label>
             <PasswordField fx:id="password" layoutX="52.0" layoutY="358.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
-            <ChoiceBox layoutX="53.0" layoutY="405.0" prefWidth="150.0" style="-fx-background-color: #E1F5FE;" />
+            <ChoiceBox fx:id="mybox" layoutX="53.0" layoutY="405.0" prefWidth="150.0" style="-fx-background-color: #E1F5FE;" />
          </children>
       </Pane>
       <VBox alignment="CENTER" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: Orange;">
