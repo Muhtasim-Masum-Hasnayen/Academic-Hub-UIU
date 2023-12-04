@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.academichubuiu.LoginPage.showMessage;
+
 public class HomePage {
     @FXML
     private Stage stage;
@@ -69,6 +71,18 @@ public class HomePage {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    public void goTologinpage(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+        showMessage("Successfully Logout", "Logout");
     }
 }
 

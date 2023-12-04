@@ -157,7 +157,7 @@ public class LoginPage implements Initializable {
 }
 
 
-    private static void showMessage(String message, String title) {
+    public static void showMessage(String message, String title) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);

@@ -54,5 +54,10 @@
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
+      <Button layoutX="660.0" layoutY="545.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goTologinpage" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
