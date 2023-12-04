@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.AddingMarks">
+   <children>
+      <Button layoutX="318.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="MID Marks" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="352.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Final Marks" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="247.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Assignment Marks" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="CT Marks" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="241.0" layoutY="-40.0">
+         <image>
+            <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="290.0" layoutY="167.0" text="Welcome to UIU Academic Hub">
+         <font>
+            <Font name="Impact" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="676.0" layoutY="556.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gotoThome" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: orange; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -17,7 +17,7 @@
    <children>
       <Pane layoutX="400.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="studentid" layoutX="51.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Student ID" style="-fx-background-color: #E1F5FE;" />
+            <TextField fx:id="studentid" layoutX="51.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="ID" style="-fx-background-color: #E1F5FE;" />
             <Label layoutX="52.0" layoutY="282.0" text="Sign in to continue" textFill="#a99797">
                <font>
                   <Font name="Ebrima Bold" size="13.0" />

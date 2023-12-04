@@ -12,18 +12,17 @@ import java.io.IOException;
 
 import static com.example.academichubuiu.LoginPage.showMessage;
 
-public class teacher {
+public class AddingMarks {
     @FXML
     private Stage stage;
     @FXML
     private Scene scene;
     @FXML
     private Parent root;
-
     @FXML
-    public void AddingMarks(ActionEvent event) throws IOException
+    public void CT(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AddingMarks.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CTMarks.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 
@@ -31,16 +30,24 @@ public class teacher {
         stage.setScene(scene);
         stage.show();
     }
-    @FXML
-    public void goTologinpage(ActionEvent event) throws IOException
+    public void AssignmentsMarks(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
-        Parent root = fxmlLoader.load();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AssignmentsMarks.fxml"));
+        root = fxmlLoader.load();
         scene = new Scene(root);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
-        showMessage("Successfully Logout", "Logout");
+    }
+    public void gotoThome(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
