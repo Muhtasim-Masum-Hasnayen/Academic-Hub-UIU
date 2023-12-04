@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import java.text.DecimalFormat;
 
 import java.io.IOException;
 
@@ -124,9 +125,11 @@ public class Controller {
                     }
 
                     cgpa = storage / totalCredit;
+                    DecimalFormat f = new DecimalFormat("#.##");
+                    //f.format(cgpa);
 
-                    Label resultLabel = new Label("Your CGPA is " + cgpa);
-                    resultLabel.setFont(Font.font(40));
+                    Label resultLabel = new Label("CGPA : "+ f.format(cgpa));
+                    resultLabel.setFont(Font.font(26));
                     resultLabel.setTextFill(new Color(0.9804, 0.9529, 1, 1));
 
                     vb.getChildren().add(resultLabel);

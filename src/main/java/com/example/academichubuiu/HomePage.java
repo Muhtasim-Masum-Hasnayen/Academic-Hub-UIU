@@ -60,5 +60,15 @@ public class HomePage {
         stage.setScene(scene);
         stage.show();
     }
+    public void CT(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CTMarks.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 }
 
