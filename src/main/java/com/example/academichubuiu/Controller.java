@@ -1,9 +1,14 @@
 package com.example.academichubuiu;
 
 
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -11,17 +16,23 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
+import java.net.URL;
 import java.text.DecimalFormat;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
         @FXML
         private AnchorPane stage1;
         @FXML
@@ -90,7 +101,7 @@ public class Controller {
                     // buttonArray[j] = new Button("Course : "+flag);
                     labelArray[0] = new Label("Course : " + flag);
                     labelArray[0].setFont(Font.font(20));
-                    labelArray[0].setTextFill(new Color(0.9804, 0.9529, 1, 1));
+                    labelArray[0].setTextFill(new Color(0, 0, 0, 1));
 
                     textFieldArray[j] = new TextField();
                     textFieldArray[j].setPromptText("Enter the GPA");
@@ -130,7 +141,7 @@ public class Controller {
 
                     Label resultLabel = new Label("CGPA : "+ f.format(cgpa));
                     resultLabel.setFont(Font.font(26));
-                    resultLabel.setTextFill(new Color(0.9804, 0.9529, 1, 1));
+                    resultLabel.setTextFill(new Color(0, 0, 0, 1));
 
                     vb.getChildren().add(resultLabel);
 
@@ -173,28 +184,28 @@ public class Controller {
             anchor_detail.getChildren().clear();
             Label l1 = new Label("CGPA till Last Semester");
             l1.setFont(Font.font(20));
-            l1.setTextFill(new Color(0.9804, 0.9529, 1, 1));
+            l1.setTextFill(new Color(0, 0, 0, 1));
 
             TextField t1 = new TextField();
             t1.setPromptText("Enter Last CGPA");
 
             Label l = new Label("Credit Completed ?");
             l.setFont(Font.font(20));
-            l.setTextFill(new Color(0.9804, 0.9529, 1, 1));
+            l.setTextFill(new Color(0, 0, 0, 1));
 
             TextField t = new TextField();
             t.setPromptText("Credit Completed");
 
             Label l2 = new Label("Current Semester CGPA");
             l2.setFont(Font.font(20));
-            l2.setTextFill(new Color(0.9804, 0.9529, 1, 1));
+            l2.setTextFill(new Color(0, 0, 0, 1));
 
             TextField t2 = new TextField();
             t2.setPromptText("Current Semester CGPA");
 
             Label l3 = new Label("Current Semester completed credit");
             l3.setFont(Font.font(20));
-            l3.setTextFill(new Color(0.9804, 0.9529, 1, 1));
+            l3.setTextFill(new Color(0, 0, 0, 1));
 
             TextField t3 = new TextField();
             t3.setPromptText("Current Semester completed credit");
@@ -222,9 +233,15 @@ public class Controller {
                 double result2 = lastCredit + presentCredit;
                 double result = result1 / result2;
 
-                Label resultLabel = new Label("Your CGPA is " + result);
+
+                DecimalFormat f = new DecimalFormat("#.##");
+                //f.format(cgpa);
+
+                Label resultLabel = new Label("CGPA : "+ f.format(result));
+
+                //Label resultLabel = new Label("Your CGPA is " + result);
                 resultLabel.setFont(Font.font(40));
-                resultLabel.setTextFill(new Color(0.9804, 0.9529, 1, 1));
+                resultLabel.setTextFill(new Color(0, 0, 0, 1));
 
                 vBox.getChildren().add(resultLabel);
             });
@@ -233,6 +250,43 @@ public class Controller {
 
 
         }
+
+    @FXML
+    private ImageView myImage;
+    @FXML
+    private ImageView bookImage;
+    @FXML
+    private ImageView CalculatorImage;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(myImage);
+        rotate.setDuration(Duration.millis(6000));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
+
+        FadeTransition fade = new FadeTransition();
+        fade.setNode(bookImage);
+        fade.setDuration(Duration.millis(500));
+        fade.setCycleCount(TranslateTransition.INDEFINITE);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
+
+        TranslateTransition translate = new TranslateTransition();
+        translate.setNode(CalculatorImage);
+        translate.setDuration(Duration.millis(1000));
+        translate.setCycleCount(TranslateTransition.INDEFINITE);
+        translate.setByX(100);
+        translate.setByY(-50);
+        translate.setAutoReverse(true);
+        translate.play();
+    }
 
 
     }

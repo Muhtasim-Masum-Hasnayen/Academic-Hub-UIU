@@ -2,34 +2,43 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="stage1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Controller">
+<AnchorPane fx:id="stage1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #C5CAE9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Controller">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="100.0" layoutX="117.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="6.0" width="756.0" />
-      <AnchorPane layoutX="79.0" layoutY="133.0" prefHeight="391.0" prefWidth="202.0" style="-fx-background-color: white;">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="708.0" stroke="BLACK" strokeType="INSIDE" width="226.0" />
+      <Circle fill="#9fa8da" layoutX="96.0" layoutY="81.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+      <ImageView fx:id="myImage" fitHeight="89.0" fitWidth="89.0" layoutX="52.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Only%20logo%20of%20UIU.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="1.0" layoutY="156.0" prefHeight="391.0" prefWidth="218.0" style="-fx-background-color: #5c6bc0;">
          <children>
-            <Button fx:id="curr" layoutX="26.0" layoutY="115.0" mnemonicParsing="false" onAction="#currentCGPA" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Current GPA" textFill="WHITE">
+            <Button fx:id="curr" layoutX="26.0" layoutY="115.0" mnemonicParsing="false" onAction="#currentCGPA" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Current GPA" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="173.0" mnemonicParsing="false" onAction="#setTotalCGPA" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Total CGPA" textFill="WHITE">
+            <Button layoutX="26.0" layoutY="173.0" mnemonicParsing="false" onAction="#setTotalCGPA" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Total CGPA" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
-            <Button fx:id="refresh" layoutX="26.0" layoutY="229.0" mnemonicParsing="false" onAction="#setRefresh" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Refresh" textFill="WHITE">
+            <Button fx:id="refresh" layoutX="26.0" layoutY="229.0" mnemonicParsing="false" onAction="#setRefresh" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Refresh" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="anchor_detail" layoutX="374.0" layoutY="209.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="306.0" prefWidth="500.0" style="-fx-background-color: Orange;">
+      <AnchorPane fx:id="anchor_detail" layoutX="374.0" layoutY="209.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="306.0" prefWidth="500.0" style="-fx-background-color: #C5CAE9;">
          <children>
             <Label fx:id="label" layoutX="26.0" layoutY="150.0" prefHeight="46.0" prefWidth="450.0" style="visibility: false;" text="Not Allowed to take more than 10 Course" textFill="WHITE">
                <font>
@@ -42,15 +51,45 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <Button layoutX="814.0" layoutY="629.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goTohomepage" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+      <Button layoutX="814.0" layoutY="629.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goTohomepage" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
-      <Text fill="WHITE" layoutX="336.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CGPA Calculator">
+      <ImageView fitHeight="277.0" fitWidth="424.0" layoutX="348.0" layoutY="-64.0">
+         <image>
+            <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bookImage" fitHeight="179.0" fitWidth="233.0" layoutX="20.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@R%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="424.0" layoutY="159.0" text="Welcome to UIU Academic Hub">
          <font>
-            <Font name="Ebrima Bold" size="49.0" />
+            <Font name="Impact" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="757.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cartoon_calculator-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="96.0" layoutX="887.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@OIP-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="904.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CGPA !?" wrappingWidth="74.9288330078125">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
          </font>
       </Text>
+      <ImageView fx:id="CalculatorImage" fitHeight="150.0" fitWidth="172.0" layoutX="238.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@flashLight-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
