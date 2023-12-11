@@ -282,8 +282,8 @@ public class Controller implements Initializable {
         translate.setNode(CalculatorImage);
         translate.setDuration(Duration.millis(1000));
         translate.setCycleCount(TranslateTransition.INDEFINITE);
-        translate.setByX(100);
-        translate.setByY(-50);
+        translate.setByX(80);
+        translate.setByY(-40);
         translate.setAutoReverse(true);
         translate.play();
     }

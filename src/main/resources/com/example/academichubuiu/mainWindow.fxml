@@ -20,8 +20,8 @@
 <BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.taskcontroller">
     <top>
         <VBox>
-            <MenuBar>
-                <Menu text="File">
+            <MenuBar style="-fx-background-color: #5c6bc0;">
+                <Menu style="-fx-background-color: #C5CAE9;" text="File">
                     <items>
                         <MenuItem onAction="#showNewItemDialog" text="New" />
                         <SeparatorMenuItem />
@@ -29,7 +29,7 @@
                     </items>
                 </Menu>
             </MenuBar>
-            <ToolBar>
+            <ToolBar style="-fx-background-color: #5c6bc0;">
                 <HBox prefHeight="30" spacing="4">
                     <Button onAction="#showNewItemDialog" prefHeight="30" text="Add">
                         <tooltip>
@@ -59,14 +59,14 @@
         </VBox>
     </top>
     <left>
-        <ListView fx:id="todoListView" onKeyPressed="#handleKeyPressed">
+        <ListView fx:id="todoListView" onKeyPressed="#handleKeyPressed" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #C5CAE9;">
 
         </ListView>
     </left>
     <center>
         <VBox style="-fx-background-color: white">
-            <TextArea fx:id="itemDetailsTextArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" />
-            <HBox>
+            <TextArea fx:id="itemDetailsTextArea" editable="false" style="-fx-background-color: blue;" wrapText="true" VBox.vgrow="ALWAYS" />
+            <HBox style="-fx-background-color: #C5CAE9;">
                 <Label style="-fx-background-color: white" text="Due: ">
                     <font>
                         <Font name="Calibri bold" size="17" />

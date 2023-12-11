@@ -28,7 +28,7 @@
                   <Font name="Ebrima Bold" size="11.0" />
                </font>
             </Label>
-            <Button layoutX="52.0" layoutY="441.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginStudent" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Login" textFill="WHITE">
+            <Button layoutX="52.0" layoutY="441.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginStudent" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: orange; -fx-background-radius: 90;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Ebrima Bold" size="16.0" />
                </font>
@@ -47,7 +47,7 @@
             <ChoiceBox fx:id="mybox" layoutX="53.0" layoutY="405.0" prefWidth="150.0" style="-fx-background-color: #E1F5FE;" />
          </children>
       </Pane>
-      <VBox alignment="CENTER" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: Orange;">
+      <VBox alignment="CENTER" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: orange;">
          <children>
             <ImageView fitHeight="255.0" fitWidth="358.0">
                <image>
