@@ -99,7 +99,7 @@
             <Image url="@task_100px.png" />
          </image>
       </ImageView>
-      <Button layoutX="239.0" layoutY="387.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling Schedule">
+      <Button layoutX="239.0" layoutY="387.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Message" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling Schedule">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>

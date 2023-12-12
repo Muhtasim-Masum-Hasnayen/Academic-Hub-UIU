@@ -39,7 +39,7 @@
             <Image url="@Only%20logo%20of%20UIU.png" />
          </image>
       </ImageView>
-      <Button layoutX="255.0" layoutY="379.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling Schedule">
+      <Button layoutX="255.0" layoutY="379.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Message" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling Schedule">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
@@ -109,7 +109,7 @@
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <ImageView fitHeight="218.0" fitWidth="274.0" layoutX="73.0" layoutY="388.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="218.0" fitWidth="274.0" layoutX="73.0" layoutY="388.0" onDragDetected="#Message" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@PrivateLimitedCompany1.png" />
          </image>

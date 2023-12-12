@@ -54,6 +54,24 @@ public class teacher implements Initializable {
         showMessage("Successfully Logout", "Logout");
     }
     @FXML
+    public void Message(ActionEvent event) throws IOException
+    {
+        System.out.println("Work");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Room.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+
+
+
+
+    @FXML
     private ImageView myImage;
     @FXML
     private ImageView bookImage;

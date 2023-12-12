@@ -1,6 +1,3 @@
-hasib	fgdfg	21-12-2023
-iuhuihi	gitfytuuyuy	22-12-2023
-fgfdgfg	gfgf	07-12-2023
-ghfh	ghhg	03-12-2023
-Masum	We should work properly.	08-12-2023
-CT	Study	13-12-2023
+ProjectUpdate	70% must be completed	05-12-2023
+CIrcuit Exam	Thevinin and Superposition	08-12-2023
+project	java project	05-12-2023

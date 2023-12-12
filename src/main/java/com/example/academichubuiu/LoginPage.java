@@ -35,9 +35,10 @@ public class LoginPage implements Initializable {
     private Circle c3;
     @FXML
     private Button play;
+    public static String cid;
 
     @FXML
-    ChoiceBox<String> mybox;
+     ChoiceBox<String> mybox;
     private String[] choice = {"Student", "Faculty"};
 
     @Override
@@ -47,6 +48,9 @@ public class LoginPage implements Initializable {
         mybox.getSelectionModel().selectFirst();
     }
 
+    public String getMyboxValue() {
+        return mybox.getValue();
+    }
 
     @FXML
     private void setRotate(Circle c, boolean reverse, int angle, int duration) {
@@ -112,7 +116,14 @@ public class LoginPage implements Initializable {
     public void loginStudent(ActionEvent event) {
 
         if (mybox.getValue().equals("Student")){
+            cid="student";
+
+
+
+
+
             String mstudentId = studentid.getText();
+
         String mpassword = password.getText();
 
         boolean loginSuccessful = false;
@@ -140,6 +151,16 @@ public class LoginPage implements Initializable {
 
         if (loginSuccessful) {
             try {
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter("check.txt"))) {
+                    // Append the student data to the file
+                    writer.write(mybox.getValue());
+                    writer.newLine();
+                    //System.out.println(studentId+" " +emailAddress+" " +password);
+                } catch (IOException e) {
+                    System.err.println("Error writing to file: " + e.getMessage());
+                }
+
+
                 goToHomePage(event);
             } catch (IOException e) {
                 e.printStackTrace(); // Handle the exception according to your needs
@@ -148,7 +169,7 @@ public class LoginPage implements Initializable {
             showMessage("Invalid Information. Login failed.", "Login");
         }
     }
-        else{
+        else{cid="faculty";
             String mstudentId = studentid.getText();
             String mpassword = password.getText();
 
@@ -176,6 +197,18 @@ public class LoginPage implements Initializable {
             }
 
             if (loginSuccessful) {
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter("check.txt"))) {
+                    // Append the student data to the file
+                    writer.write(mybox.getValue());
+                    writer.newLine();
+                    //System.out.println(studentId+" " +emailAddress+" " +password);
+                } catch (IOException e) {
+                    System.err.println("Error writing to file: " + e.getMessage());
+                }
+
+
+
+
                 try {
                     goToTeacherPage(event);
                 } catch (IOException e) {
