@@ -2,36 +2,45 @@ package com.example.academichubuiu;
 
 //import animatefx.animation.FadeIn;
 //import animatefx.animation.FadeOut;
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.NodeOrientation;
 import javafx.scene.Node;
-        import javafx.scene.control.Button;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-        import javafx.scene.image.Image;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-        import javafx.scene.paint.Color;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.scene.transform.Rotate;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 //import org.apache.commons.lang3.StringUtils;
 
 import javax.imageio.ImageIO;
-        import java.awt.image.BufferedImage;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-        import static com.example.academichubuiu.netController.users;
+import static com.example.academichubuiu.netController.users;
 
 public class Room extends Thread implements Initializable {
     @FXML
@@ -71,6 +80,24 @@ public class Room extends Thread implements Initializable {
     BufferedReader reader;
     PrintWriter writer;
     Socket socket;
+    @FXML
+    private Stage stage;
+    @FXML
+    private Scene scene;
+    @FXML
+    private Parent root;
+
+    @FXML
+    public void gotoThome (ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 
@@ -104,7 +131,7 @@ public class Room extends Thread implements Initializable {
 
 
         System.out.println("Check="+check);
-       return check; // Now you can use myboxValue as needed
+        return check; // Now you can use myboxValue as needed
     }
 
 
@@ -145,7 +172,7 @@ public class Room extends Thread implements Initializable {
 
     public void handleProfileBtn(ActionEvent event) {
         if (event.getSource().equals(profileBtn) && !toggleProfile) {
-           // new FadeIn(profile).play();
+            // new FadeIn(profile).play();
             profile.toFront();
             chat.toBack();
             toggleProfile = true;
@@ -227,21 +254,80 @@ public class Room extends Thread implements Initializable {
         }
     }
 
+    @FXML
+    private ImageView myImage;
+    @FXML
+    private ImageView classroomImage;
+    @FXML
+    private ImageView bookImage;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        showProPic.setStroke(Color.valueOf("#90a4ae"));
-       try {
-           Image image;
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(myImage);
+        rotate.setDuration(Duration.millis(6000));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
 
-           image = new Image("icons/user.png", false);
+        FadeTransition fade = new FadeTransition();
+        fade.setNode(classroomImage);
+        fade.setDuration(Duration.millis(500));
+        fade.setCycleCount(TranslateTransition.INDEFINITE);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
+
+        TranslateTransition translate = new TranslateTransition();
+        translate.setNode(bookImage);
+        translate.setDuration(Duration.millis(1000));
+        translate.setCycleCount(TranslateTransition.INDEFINITE);
+        translate.setByX(400);
+        //translate.setByY(-40);
+        translate.setAutoReverse(true);
+        translate.play();
+
+        showProPic.setStroke(Color.valueOf("#90a4ae"));
+        try {
+            Image image;
+
+            image = new Image("icons/user.png", false);
 //        } else {
 //            image = new Image("icons/female.png", false);
 //            proImage.setImage(image);
 //        }
-           showProPic.setFill(new ImagePattern(image));
-       }catch(Exception e){}
+            showProPic.setFill(new ImagePattern(image));
+        }catch(Exception e){}
         clientName.setText(someMethod());
         System.out.println("after connect");
         connectSocket();
     }
+
+   /* @FXML
+    private ImageView myImage;
+    @FXML
+    private ImageView bookImage;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(myImage);
+        rotate.setDuration(Duration.millis(6000));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
+
+        FadeTransition fade = new FadeTransition();
+        fade.setNode(bookImage);
+        fade.setDuration(Duration.millis(5000));
+        fade.setCycleCount(TranslateTransition.INDEFINITE);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
+    }*/
 }
