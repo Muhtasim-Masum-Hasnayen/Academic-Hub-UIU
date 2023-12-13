@@ -17,24 +17,24 @@
    <children>
       <StackPane prefHeight="560.0" prefWidth="330.0" style="-fx-background-color: red;">
          <children>
-            <Pane fx:id="pnSignUp" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #263238#263238;" stylesheets="@../../../../java/Css/style.css">
+            <Pane fx:id="pnSignUp" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #263238#263238;" stylesheets="@Style.css">
                <children>
                   <ImageView fx:id="btnBack" fitHeight="38.0" fitWidth="44.0" layoutX="9.0" layoutY="12.0" onMousePressed="#handleMouseEvent" opacity="0.48" pickOnBounds="true" preserveRatio="true" styleClass="btnBack">
                      <image>
                         <Image url="@../../../../java/icons/go_back.png" />
                      </image>
                   </ImageView>
-                  <PasswordField fx:id="regPass" layoutX="49.0" layoutY="178.0" prefHeight="35.0" prefWidth="233.0" promptText="Password" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@../../../../java/Css/style.css">
+                  <PasswordField fx:id="regPass" layoutX="49.0" layoutY="178.0" prefHeight="35.0" prefWidth="233.0" promptText="Password" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@Style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
                   </PasswordField>
-                  <TextField fx:id="regFirstName" layoutX="49.0" layoutY="83.0" prefHeight="35.0" prefWidth="233.0" promptText="Full Name" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@../../../../java/Css/style.css">
+                  <TextField fx:id="regFirstName" layoutX="49.0" layoutY="83.0" prefHeight="35.0" prefWidth="233.0" promptText="Full Name" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@Style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="regEmail" layoutX="49.0" layoutY="226.0" prefHeight="34.0" prefWidth="233.0" promptText="Email" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@../../../../java/Css/style.css">
+                  <TextField fx:id="regEmail" layoutX="49.0" layoutY="226.0" prefHeight="34.0" prefWidth="233.0" promptText="Email" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@Style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
@@ -44,7 +44,7 @@
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Button layoutX="59.0" layoutY="377.0" mnemonicParsing="false" onAction="#registration" prefHeight="35.0" prefWidth="208.0" style="-fx-background-radius: 90; -fx-background-color: #718792;" styleClass="btnLogin" stylesheets="@../../../../java/Css/style.css" text="Create Account" textFill="#004c40">
+                  <Button layoutX="59.0" layoutY="377.0" mnemonicParsing="false" onAction="#registration" prefHeight="35.0" prefWidth="208.0" style="-fx-background-radius: 90; -fx-background-color: #718792;" styleClass="btnLogin" stylesheets="@Style.css" text="Create Account" textFill="#004c40">
                      <font>
                         <Font name="Beirut Regular" size="18.0" />
                      </font>
@@ -54,7 +54,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <Button fx:id="getStarted" layoutX="108.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: #718792; -fx-background-radius: 90;" styleClass="btnLogin" stylesheets="@../../../../java/Css/style.css" text="Log In Here" textFill="#004c40">
+                  <Button fx:id="getStarted" layoutX="108.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: #718792; -fx-background-radius: 90;" styleClass="btnLogin" stylesheets="@Style.css" text="Log In Here" textFill="#004c40">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -74,7 +74,7 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="regName" layoutX="49.0" layoutY="129.0" prefHeight="35.0" prefWidth="233.0" promptText="Username" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@../../../../java/Css/style.css">
+                  <TextField fx:id="regName" layoutX="49.0" layoutY="129.0" prefHeight="35.0" prefWidth="233.0" promptText="Username" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@Style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
@@ -107,7 +107,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="regPhoneNo" layoutX="49.0" layoutY="272.0" prefHeight="35.0" prefWidth="233.0" promptText="Phone Number" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@../../../../java/Css/style.css">
+                  <TextField fx:id="regPhoneNo" layoutX="49.0" layoutY="272.0" prefHeight="35.0" prefWidth="233.0" promptText="Phone Number" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@Style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
@@ -116,17 +116,17 @@
             </Pane>
             <Pane fx:id="pnSignIn" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #263238;">
                <children>
-                  <TextField fx:id="userName" layoutX="69.0" layoutY="218.0" prefHeight="34.0" prefWidth="208.0" promptText="Username" style="-fx-background-color: #455a64; -fx-focus-traversable: green;" styleClass="txtFont" stylesheets="@../../../../java/Css/style.css">
+                  <TextField fx:id="userName" layoutX="69.0" layoutY="218.0" prefHeight="34.0" prefWidth="208.0" promptText="Username" style="-fx-background-color: #455a64; -fx-focus-traversable: green;" styleClass="txtFont" stylesheets="@Style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
                   </TextField>
-                  <PasswordField fx:id="passWord" layoutX="68.0" layoutY="268.0" prefHeight="35.0" prefWidth="208.0" promptText="Password" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@../../../../java/Css/style.css">
+                  <PasswordField fx:id="passWord" layoutX="68.0" layoutY="268.0" prefHeight="35.0" prefWidth="208.0" promptText="Password" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@Style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
                   </PasswordField>
-                  <Button layoutX="69.0" layoutY="341.0" mnemonicParsing="false" onAction="#changeWindow" prefHeight="38.0" prefWidth="208.0" style="-fx-background-radius: 90; -fx-background-color: #718792;" styleClass="btnLogin" stylesheets="@../../../../java/Css/style.css" text="Log In" textFill="#004c40">
+                  <Button layoutX="69.0" layoutY="341.0" mnemonicParsing="false" onAction="#changeWindow" prefHeight="38.0" prefWidth="208.0" style="-fx-background-radius: 90; -fx-background-color: #718792;" styleClass="btnLogin" stylesheets="@Style.css" text="Log In" textFill="#004c40">
                      <font>
                         <Font name="Beirut Regular" size="18.0" />
                      </font>
@@ -136,7 +136,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <Button fx:id="btnSignUp" layoutX="113.0" layoutY="490.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="28.0" prefWidth="112.0" style="-fx-background-color: #718792; -fx-background-radius: 90;" styleClass="btnLogin" stylesheets="@../../../../java/Css/style.css" text="Sign Up Here" textFill="#004c40">
+                  <Button fx:id="btnSignUp" layoutX="113.0" layoutY="490.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="28.0" prefWidth="112.0" style="-fx-background-color: #718792; -fx-background-radius: 90;" styleClass="btnLogin" stylesheets="@Style.css" text="Sign Up Here" textFill="#004c40">
                      <font>
                         <Font size="14.0" />
                      </font>

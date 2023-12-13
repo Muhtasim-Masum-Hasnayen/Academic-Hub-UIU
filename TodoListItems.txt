@@ -1,3 +1,6 @@
-ProjectUpdate	70% must be completed	05-12-2023
-CIrcuit Exam	Thevinin and Superposition	08-12-2023
-project	java project	05-12-2023
+hello World	new life	01-01-2024
+Java Fuision	We should work properly	18-12-2023
+About Today	Study Study & Study	13-12-2023
+About Tommorow	Study	14-12-2023
+Calculus Quiz	Topic 2.1 - 2.2	15-12-2023
+hello	world	04-01-2024

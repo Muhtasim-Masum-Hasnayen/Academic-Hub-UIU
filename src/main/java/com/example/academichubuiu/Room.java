@@ -90,7 +90,7 @@ public class Room extends Thread implements Initializable {
     @FXML
     public void gotoThome (ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 
@@ -303,6 +303,17 @@ public class Room extends Thread implements Initializable {
         clientName.setText(someMethod());
         System.out.println("after connect");
         connectSocket();
+    }
+
+    public void gotohome(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
    /* @FXML

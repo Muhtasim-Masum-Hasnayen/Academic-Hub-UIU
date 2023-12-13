@@ -99,6 +99,7 @@ public class LoginPage implements Initializable {
 
     public void goToHomePage(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
+
         root = fxmlLoader.load();
         scene = new Scene(root);
 

@@ -18,6 +18,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Academic Hub UIU");
+
         stage.setScene(scene);
         stage.setMaximized(false);
         stage.setFullScreen(false);

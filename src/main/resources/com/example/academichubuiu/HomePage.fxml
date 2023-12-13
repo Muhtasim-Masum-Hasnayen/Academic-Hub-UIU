@@ -34,7 +34,7 @@
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="17.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
+      <Button layoutX="17.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#classroutine" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>

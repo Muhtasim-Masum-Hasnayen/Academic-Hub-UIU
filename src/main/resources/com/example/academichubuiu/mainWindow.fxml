@@ -11,6 +11,7 @@
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -30,6 +31,11 @@
                 </Menu>
             </MenuBar>
             <ToolBar style="-fx-background-color: #5c6bc0;">
+            <ImageView fitHeight="34.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icon%20UIU_Academic_Hub.png" />
+               </image>
+            </ImageView>
                 <HBox prefHeight="30" spacing="4">
                     <Button onAction="#showNewItemDialog" prefHeight="30" text="Add">
                         <tooltip>
@@ -46,27 +52,27 @@
                             <Tooltip text="Show today's task only" />
                         </tooltip>
                     </ToggleButton>
-               <Button onAction="#gotohomepage" prefHeight="30" text="Back">
-                  <tooltip>
-                     <Tooltip text="Add a new task" />
-                  </tooltip>
-                  <graphic>
-                     <ImageView />
-                  </graphic>
-               </Button>
+                    <Button onAction="#gotohomepage" prefHeight="30" text="Back">
+                        <tooltip>
+                            <Tooltip text="Add a new task" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView />
+                        </graphic>
+                    </Button>
                 </HBox>
             </ToolBar>
         </VBox>
     </top>
     <left>
-        <ListView fx:id="todoListView" onKeyPressed="#handleKeyPressed" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #C5CAE9;">
+        <ListView fx:id="todoListView" onKeyPressed="#handleKeyPressed" prefHeight="600.0" prefWidth="400.0">
 
         </ListView>
     </left>
     <center>
         <VBox style="-fx-background-color: white">
-            <TextArea fx:id="itemDetailsTextArea" editable="false" style="-fx-background-color: blue;" wrapText="true" VBox.vgrow="ALWAYS" />
-            <HBox style="-fx-background-color: #C5CAE9;">
+            <TextArea fx:id="itemDetailsTextArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" />
+            <HBox>
                 <Label style="-fx-background-color: white" text="Due: ">
                     <font>
                         <Font name="Calibri bold" size="17" />

@@ -42,6 +42,17 @@ public class HomePage implements Initializable{
         stage.show();
     }
     @FXML
+    public void classroutine(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("table-view.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
     public void note(ActionEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Note.fxml"));
@@ -83,6 +94,7 @@ public class HomePage implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     public void goTologinpage(ActionEvent event) throws IOException
     {
@@ -101,11 +113,15 @@ public class HomePage implements Initializable{
     {
         System.out.println("Work");
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Room.fxml"));
+
         root = fxmlLoader.load();
         scene = new Scene(root);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         stage.setScene(scene);
+        scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
+
         stage.show();
 
     }
