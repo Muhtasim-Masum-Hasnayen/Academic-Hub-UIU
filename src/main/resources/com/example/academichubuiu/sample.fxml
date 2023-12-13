@@ -71,7 +71,7 @@
             <Font name="Impact" size="22.0" />
          </font>
       </Label>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="757.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="calImage" fitHeight="150.0" fitWidth="200.0" layoutX="757.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cartoon_calculator-removebg-preview.png" />
          </image>
@@ -86,7 +86,7 @@
             <Font name="Bell MT Bold" size="17.0" />
          </font>
       </Text>
-      <ImageView fx:id="CalculatorImage" fitHeight="150.0" fitWidth="172.0" layoutX="238.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="lightImage" fitHeight="150.0" fitWidth="172.0" layoutX="238.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@flashLight-removebg-preview.png" />
          </image>

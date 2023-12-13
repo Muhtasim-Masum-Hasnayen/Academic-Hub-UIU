@@ -114,9 +114,9 @@
             <Image url="@PrivateLimitedCompany1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="216.0" fitWidth="261.0" layoutX="541.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="231.0" fitWidth="264.0" layoutX="525.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@craft.png" />
+            <Image url="@board-meeting.png" />
          </image>
       </ImageView>
    </children>

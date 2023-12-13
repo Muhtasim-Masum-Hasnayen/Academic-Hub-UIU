@@ -1,45 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.AddingMarks">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #C5CAE9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.AddingMarks">
    <children>
-      <Button layoutX="318.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="MID Marks" textFill="WHITE">
+      <Button layoutX="676.0" layoutY="556.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gotoThome" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
          <font>
-            <Font name="Ebrima Bold" size="12.0" />
+            <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="318.0" layoutY="352.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Final Marks" textFill="WHITE">
-         <font>
-            <Font name="Ebrima Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="318.0" layoutY="247.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Assignment Marks" textFill="WHITE">
-         <font>
-            <Font name="Ebrima Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="318.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="CT Marks" textFill="WHITE">
-         <font>
-            <Font name="Ebrima Bold" size="12.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="241.0" layoutY="-40.0">
+      <TextField layoutX="328.0" layoutY="141.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter Course Name" />
+      <Text layoutX="247.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Name :" />
+      <TextField layoutX="332.0" layoutY="229.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 1" />
+      <Text layoutX="283.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 1     :" />
+      <TextField layoutX="332.0" layoutY="265.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 2" />
+      <Text layoutX="283.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 2     :" />
+      <TextField layoutX="331.0" layoutY="301.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 3" />
+      <Text layoutX="282.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 3     :" />
+      <TextField layoutX="330.0" layoutY="336.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 4" />
+      <Text layoutX="281.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 4     :" />
+      <TextField layoutX="561.0" layoutY="226.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 1" />
+      <Text layoutX="469.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 1 :" />
+      <TextField layoutX="561.0" layoutY="262.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 2" />
+      <Text layoutX="470.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 2 :" />
+      <TextField layoutX="330.0" layoutY="377.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter MID Marks" />
+      <Text layoutX="282.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MID     :" />
+      <TextField layoutX="330.0" layoutY="416.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter FINAL Marks" />
+      <Text layoutX="283.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FINAL  :" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="600.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Circle fill="#9fa8da" layoutX="95.0" layoutY="79.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="304.0" layoutY="-69.0">
          <image>
             <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
          </image>
       </ImageView>
-      <Label layoutX="290.0" layoutY="167.0" text="Welcome to UIU Academic Hub">
-         <font>
-            <Font name="Impact" size="22.0" />
-         </font>
-      </Label>
-      <Button layoutX="676.0" layoutY="556.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gotoThome" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: orange; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+      <ImageView fx:id="myImage" fitHeight="89.0" fitWidth="89.0" layoutX="51.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Only%20logo%20of%20UIU.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="327.0" layoutY="180.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter Student ID" />
+      <Text layoutX="249.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID     :" />
+      <ImageView fx:id="bookImage" fitHeight="81.0" fitWidth="98.0" layoutX="54.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@8175061.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="380.0" layoutY="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Enter" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="16.0" />
          </font>
