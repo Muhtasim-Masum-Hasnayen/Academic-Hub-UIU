@@ -69,17 +69,17 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="fileChoosePath" editable="false" layoutX="9.0" layoutY="285.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." style="-fx-background-color: #455a64;" styleClass="textField" stylesheets="@../../../../java/Css/style.css">
+                  <TextField fx:id="fileChoosePath" editable="false" layoutX="9.0" layoutY="285.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." style="-fx-background-color: #455a64;" styleClass="textField" stylesheets="@Style.css">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#chooseImageButton" prefHeight="26.0" prefWidth="77.0" styleClass="allButton" stylesheets="@../../../../java/Css/style.css" text="Choose">
+                  <Button layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#chooseImageButton" prefHeight="26.0" prefWidth="77.0" styleClass="allButton" stylesheets="@Style.css" text="Choose">
                      <font>
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="118.0" layoutY="397.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" styleClass="allButton" stylesheets="@../../../../java/Css/style.css" text="Save">
+                  <Button layoutX="118.0" layoutY="397.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" styleClass="allButton" stylesheets="@Style.css" text="Save">
                      <font>
                         <Font name="Arial" size="19.0" />
                      </font>
@@ -89,7 +89,7 @@
             <Pane fx:id="chat" minWidth="-Infinity" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: #263238;">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5cae9" height="456.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
-                  <TextArea fx:id="msgRoom" editable="false" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" style="-fx-background-color: #263238;" styleClass="text-area" stylesheets="@../../../../java/Css/style.css" wrapText="true">
+                  <TextArea fx:id="msgRoom" editable="false" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" style="-fx-background-color: #263238;" styleClass="text-area" stylesheets="@Style.css" wrapText="true">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -106,7 +106,7 @@
                               <Image url="@../../../../java/icons/icons8-sent.png" />
                            </image>
                         </ImageView>
-                        <TextField fx:id="msgField" layoutX="2.0" layoutY="5.0" onKeyPressed="#sendMessageByKey" prefHeight="38.0" prefWidth="725.0" promptText="Write messages here...." styleClass="msgBox" stylesheets="@../../../../java/Css/style.css">
+                        <TextField fx:id="msgField" layoutX="2.0" layoutY="5.0" onKeyPressed="#sendMessageByKey" prefHeight="38.0" prefWidth="725.0" promptText="Write messages here...." styleClass="msgBox" stylesheets="@Style.css">
                            <font>
                               <Font name="Arial" size="19.0" />
                            </font>
@@ -141,7 +141,7 @@
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <Button fx:id="profileBtn" layoutX="707.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleProfileBtn" style="-fx-background-color: #c5cae9;" styleClass="allButton" stylesheets="@../../../../java/Css/style.css" text="Profile">
+            <Button fx:id="profileBtn" layoutX="707.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleProfileBtn" style="-fx-background-color: #c5cae9;" styleClass="allButton" stylesheets="@Style.css" text="Profile">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>

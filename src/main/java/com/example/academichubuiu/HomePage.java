@@ -101,11 +101,15 @@ public class HomePage implements Initializable{
     {
         System.out.println("Work");
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Room.fxml"));
+
         root = fxmlLoader.load();
         scene = new Scene(root);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         stage.setScene(scene);
+        scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
+
         stage.show();
 
     }
