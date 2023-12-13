@@ -8,6 +8,7 @@ import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -31,7 +32,7 @@ import java.text.DecimalFormat;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
         @FXML
         private AnchorPane stage1;
         @FXML
@@ -250,6 +251,11 @@ public class Controller {
     @FXML
     private ImageView bookImage;
 
+    @FXML
+    private ImageView lightImage;
+    @FXML
+    private ImageView calImage;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         RotateTransition rotate = new RotateTransition();
@@ -269,6 +275,24 @@ public class Controller {
         fade.setFromValue(0);
         fade.setToValue(1);
         fade.play();
+
+        TranslateTransition translate = new TranslateTransition();
+        translate.setNode(lightImage);
+        translate.setDuration(Duration.millis(1000));
+        translate.setCycleCount(TranslateTransition.INDEFINITE);
+        translate.setByX(50);
+        translate.setByY(-40);
+        translate.setAutoReverse(true);
+        translate.play();
+
+        FadeTransition fade1 = new FadeTransition();
+        fade1.setNode(calImage);
+        fade1.setDuration(Duration.millis(500));
+        fade1.setCycleCount(TranslateTransition.INDEFINITE);
+        fade1.setInterpolator(Interpolator.LINEAR);
+        fade1.setFromValue(0);
+        fade1.setToValue(1);
+        fade1.play();
     }
 
 
