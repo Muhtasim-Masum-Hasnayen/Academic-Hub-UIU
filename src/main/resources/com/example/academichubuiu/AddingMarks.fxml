@@ -17,7 +17,7 @@
             <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
-      <TextField layoutX="328.0" layoutY="141.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter Course Name" />
+      <TextField alignment="CENTER" layoutX="328.0" layoutY="141.0" prefHeight="26.0" prefWidth="380.0" promptText="Enter Course Name" />
       <Text layoutX="247.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Name :" />
       <TextField layoutX="332.0" layoutY="229.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 1" />
       <Text layoutX="283.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 1     :" />
@@ -27,17 +27,17 @@
       <Text layoutX="282.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 3     :" />
       <TextField layoutX="330.0" layoutY="336.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 4" />
       <Text layoutX="281.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 4     :" />
-      <TextField layoutX="561.0" layoutY="226.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 1" />
+      <TextField layoutX="561.0" layoutY="226.0" prefHeight="26.0" prefWidth="147.0" promptText="Enter Assignment 1" />
       <Text layoutX="469.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 1 :" />
-      <TextField layoutX="561.0" layoutY="262.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 2" />
+      <TextField layoutX="561.0" layoutY="262.0" prefHeight="26.0" prefWidth="147.0" promptText="Enter Assignment 2" />
       <Text layoutX="470.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 2 :" />
-      <TextField layoutX="330.0" layoutY="377.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter MID Marks" />
+      <TextField alignment="CENTER" layoutX="330.0" layoutY="377.0" prefHeight="26.0" prefWidth="380.0" promptText="Enter MID Marks" />
       <Text layoutX="282.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MID     :" />
-      <TextField layoutX="330.0" layoutY="416.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter FINAL Marks" />
+      <TextField alignment="CENTER" layoutX="330.0" layoutY="416.0" prefHeight="26.0" prefWidth="380.0" promptText="Enter FINAL Marks" />
       <Text layoutX="283.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FINAL  :" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="600.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <Circle fill="#9fa8da" layoutX="95.0" layoutY="79.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="304.0" layoutY="-69.0">
+      <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="333.0" layoutY="-62.0">
          <image>
             <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
          </image>
@@ -47,14 +47,14 @@
             <Image url="@Only%20logo%20of%20UIU.png" />
          </image>
       </ImageView>
-      <TextField layoutX="327.0" layoutY="180.0" prefHeight="26.0" prefWidth="322.0" promptText="Enter Student ID" />
+      <TextField alignment="CENTER" layoutX="327.0" layoutY="180.0" prefHeight="26.0" prefWidth="380.0" promptText="Enter Student ID" />
       <Text layoutX="249.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID     :" />
       <ImageView fx:id="bookImage" fitHeight="81.0" fitWidth="98.0" layoutX="54.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@8175061.png" />
          </image>
       </ImageView>
-      <Button layoutX="380.0" layoutY="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Enter" textFill="WHITE">
+      <Button layoutX="405.0" layoutY="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Enter" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="16.0" />
          </font>

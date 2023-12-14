@@ -64,16 +64,7 @@ public class HomePage implements Initializable{
         stage.show();
     }
 
-    public void AssignmentsMarks(ActionEvent event) throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AssignmentsMarks.fxml"));
-        root = fxmlLoader.load();
-        scene = new Scene(root);
 
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
     public void TaskManagement(ActionEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainWindow.fxml"));
@@ -84,7 +75,7 @@ public class HomePage implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    public void CT(ActionEvent event) throws IOException
+    public void Marks(ActionEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CTMarks.fxml"));
         root = fxmlLoader.load();

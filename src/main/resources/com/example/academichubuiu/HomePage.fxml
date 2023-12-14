@@ -39,12 +39,7 @@
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="17.0" layoutY="368.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#AssignmentsMarks" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Assignments' Marks" textFill="WHITE">
-         <font>
-            <Font name="Ebrima Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="17.0" layoutY="316.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#CT" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="CT's Marks" textFill="WHITE">
+      <Button layoutX="18.0" layoutY="316.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Marks" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Marks" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
@@ -99,7 +94,7 @@
             <Image url="@task_100px.png" />
          </image>
       </ImageView>
-      <Button layoutX="239.0" layoutY="387.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Message" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling Schedule">
+      <Button layoutX="239.0" layoutY="387.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Message" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
