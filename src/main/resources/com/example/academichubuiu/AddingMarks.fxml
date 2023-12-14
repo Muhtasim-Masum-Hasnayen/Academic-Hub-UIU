@@ -17,8 +17,8 @@
             <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
-      <TextField alignment="CENTER" layoutX="328.0" layoutY="141.0" prefHeight="26.0" prefWidth="380.0" promptText="Enter Course Name" />
-      <Text layoutX="247.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Name :" />
+      <TextField alignment="CENTER" layoutX="328.0" layoutY="141.0" prefHeight="26.0" prefWidth="380.0" promptText="Formate : CSE-XXXXXX" />
+      <Text layoutX="247.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Code :" />
       <TextField layoutX="332.0" layoutY="229.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 1" />
       <Text layoutX="283.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CT 1     :" />
       <TextField layoutX="332.0" layoutY="265.0" prefHeight="26.0" prefWidth="90.0" promptText="Enter CT 2" />
