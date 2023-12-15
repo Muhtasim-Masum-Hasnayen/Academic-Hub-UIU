@@ -1,7 +1,6 @@
 package com.example.academichubuiu;
 //package com.example.demo;
 
-import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
@@ -23,25 +22,26 @@ import javafx.scene.image.ImageView;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import java.util.ArrayList;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
-public class TableViewController implements Initializable {
+public class Routine implements Initializable,Serializable {
 
     @FXML
-    private TableColumn<Person, String> firstName;
+    private TableColumn<TableData, String> firstName;
 
     @FXML
-    private TableColumn<Person, String> lastName;
+    private TableColumn<TableData, String> lastName;
 
     @FXML
-    private TableColumn<Person, String> origin;
+    private TableColumn<TableData, String> origin;
 
     @FXML
-    private TableView<Person> table;
+    private TableView<TableData> table;
 
     @FXML
     private TextField txtFName;
@@ -52,9 +52,9 @@ public class TableViewController implements Initializable {
     @FXML
     private TextField txtOrigin;
 
-    ObservableList<Person> initialData(){
-        Person p1 = new Person("AOOP","Tuesday"," 8.30 AM");
-        Person p2 = new Person("Electrical Circuits","Monday"," 11.00-12.20 AM-PM");
+    ObservableList<TableData> initialData(){
+        TableData p1 = new TableData("AOOP","Tuesday"," 8.30 AM");
+        TableData p2 = new TableData("Electrical Circuits","Monday"," 11.00-12.20 AM-PM");
         return FXCollections.observableArrayList(p1, p2);
     }
 
@@ -62,8 +62,9 @@ public class TableViewController implements Initializable {
     private void btnInsert(ActionEvent event){
 
         if(!txtFName.getText().isEmpty() || !txtLName.getText().isEmpty() || !txtOrigin.getText().isEmpty()){
-            Person newData = new Person(txtFName.getText(), txtLName.getText(), txtOrigin.getText());
+            TableData newData = new TableData(txtFName.getText(), txtLName.getText(), txtOrigin.getText());
             table.getItems().add(newData);
+            saveTableDataToFile();
             txtFName.clear();
             txtLName.clear();
             txtOrigin.clear();
@@ -74,7 +75,7 @@ public class TableViewController implements Initializable {
 
     @FXML
     private void deleteData(ActionEvent event){
-        TableView.TableViewSelectionModel<Person> selectionModel = table.getSelectionModel();
+        TableView.TableViewSelectionModel<TableData> selectionModel = table.getSelectionModel();
         if(selectionModel.isEmpty()){
             System.out.println("You need select a data before deleting.");
         }
@@ -89,6 +90,45 @@ public class TableViewController implements Initializable {
             selectionModel.clearSelection(selectedIndices[i].intValue());
             table.getItems().remove(selectedIndices[i].intValue());
         }
+        saveTableDataToFile();
+    }
+
+    // Method to save the table data to a file
+    private void saveTableDataToFile() {
+        File file = new File("tabledata.txt");
+        ObservableList<TableData> tableDataList = table.getItems();
+
+        // Convert ObservableListWrapper to ArrayList
+        ArrayList<TableData> serializableList = new ArrayList<>(tableDataList);
+
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+            outputStream.writeObject(serializableList);
+            System.out.println("Table data saved to file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Method to load the table data from a file
+    private ObservableList<TableData> loadTableDataFromFile() {
+        File file = new File("tabledata.txt");
+
+        if (file.exists()) {
+            try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
+                ArrayList<TableData> data = (ArrayList<TableData>) inputStream.readObject();
+
+                // Convert ArrayList to ObservableList
+                ObservableList<TableData> observableList = FXCollections.observableArrayList(data);
+                return observableList;
+            } catch (EOFException e) {
+                // Handle the end of the file
+                System.out.println("End of file reached while reading data.");
+            } catch (IOException | ClassNotFoundException e) {
+                // Handle other exceptions
+                e.printStackTrace();
+            }
+        }
+        return FXCollections.observableArrayList();
     }
 
     @FXML
@@ -97,14 +137,15 @@ public class TableViewController implements Initializable {
     private ImageView bookImage;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        firstName.setCellValueFactory(new PropertyValueFactory<Person, String>("firstName"));
-        lastName.setCellValueFactory(new PropertyValueFactory<Person, String>("lastName"));
-        origin.setCellValueFactory(new PropertyValueFactory<Person, String>("origin"));
+        firstName.setCellValueFactory(new PropertyValueFactory<TableData, String>("firstName"));
+        lastName.setCellValueFactory(new PropertyValueFactory<TableData, String>("lastName"));
+        origin.setCellValueFactory(new PropertyValueFactory<TableData, String>("origin"));
 
-        table.setItems(initialData());
+        // Load the table data from the file during initialization
+        table.setItems(loadTableDataFromFile());
 
+        // Edit data after setting the items
         editData();
-
 
         RotateTransition rotate = new RotateTransition();
         rotate.setNode(myImage);
@@ -123,65 +164,32 @@ public class TableViewController implements Initializable {
         rotate2.setByAngle(360);
         rotate2.setAxis(Rotate.Z_AXIS);
         rotate2.play();
-
-        /*FadeTransition fade = new FadeTransition();
-        fade.setNode(bookImage);
-        fade.setDuration(Duration.millis(5000));
-        fade.setCycleCount(TranslateTransition.INDEFINITE);
-        fade.setInterpolator(Interpolator.LINEAR);
-        fade.setFromValue(0);
-        fade.setToValue(1);
-        fade.play();*/
     }
 
     private void editData(){
-        firstName.setCellFactory(TextFieldTableCell.<Person>forTableColumn());
+        firstName.setCellFactory(TextFieldTableCell.<TableData>forTableColumn());
         firstName.setOnEditCommit(event ->{
-            Person person = event.getTableView().getItems().get(event.getTablePosition().getRow());
-            person.setFirstName(event.getNewValue());
-            System.out.println(person.getLastName() + "'s Name was updated to "+ event.getNewValue() +" at row "+ (event.getTablePosition().getRow() + 1));
+            TableData tableData = event.getTableView().getItems().get(event.getTablePosition().getRow());
+            tableData.setFirstName(event.getNewValue());
+            System.out.println(tableData.getLastName() + "'s Name was updated to "+ event.getNewValue() +" at row "+ (event.getTablePosition().getRow() + 1));
         });
 
-        lastName.setCellFactory(TextFieldTableCell.<Person>forTableColumn());
+        lastName.setCellFactory(TextFieldTableCell.<TableData>forTableColumn());
         lastName.setOnEditCommit(event ->{
-            Person person = event.getTableView().getItems().get(event.getTablePosition().getRow());
-            person.setLastName(event.getNewValue());
-            System.out.println(person.getFirstName() + "'s Last Name was updated to "+ event.getNewValue() +" at row "+ (event.getTablePosition().getRow() + 1));
+            TableData tableData = event.getTableView().getItems().get(event.getTablePosition().getRow());
+            tableData.setLastName(event.getNewValue());
+            System.out.println(tableData.getFirstName() + "'s Last Name was updated to "+ event.getNewValue() +" at row "+ (event.getTablePosition().getRow() + 1));
         });
 
-        origin.setCellFactory(TextFieldTableCell.<Person>forTableColumn());
+        origin.setCellFactory(TextFieldTableCell.<TableData>forTableColumn());
         origin.setOnEditCommit(event ->{
-            Person person = event.getTableView().getItems().get(event.getTablePosition().getRow());
-            person.setOrigin(event.getNewValue());
+            TableData tableData = event.getTableView().getItems().get(event.getTablePosition().getRow());
+            tableData.setOrigin(event.getNewValue());
             System.out.println("Origin was updated to "+ event.getNewValue() +" at row "+ (event.getTablePosition().getRow() + 1));
         });
     }
 
-    /*@FXML
-    private ImageView myImage;
-    @FXML
-    private ImageView bookImage;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        RotateTransition rotate = new RotateTransition();
-        rotate.setNode(myImage);
-        rotate.setDuration(Duration.millis(6000));
-        rotate.setCycleCount(TranslateTransition.INDEFINITE);
-        rotate.setInterpolator(Interpolator.LINEAR);
-        rotate.setByAngle(360);
-        rotate.setAxis(Rotate.Y_AXIS);
-        rotate.play();
-
-        FadeTransition fade = new FadeTransition();
-        fade.setNode(bookImage);
-        fade.setDuration(Duration.millis(5000));
-        fade.setCycleCount(TranslateTransition.INDEFINITE);
-        fade.setInterpolator(Interpolator.LINEAR);
-        fade.setFromValue(0);
-        fade.setToValue(1);
-        fade.play();
-    }*/
     @FXML
     private Stage stage;
     @FXML

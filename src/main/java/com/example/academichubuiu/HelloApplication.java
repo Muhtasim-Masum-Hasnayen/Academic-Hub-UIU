@@ -36,7 +36,7 @@ public class HelloApplication extends Application {
         // Load the UI icon
         Image uiu = null;
         try {
-            uiu = new Image(new FileInputStream("D:\\Mainproject\\src\\main\\resources\\com\\example\\academichubuiu\\Icon UIU_Academic_Hub.png"));
+            uiu = new Image(new FileInputStream("Icon UIU_Academic_Hub.png"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

@@ -44,7 +44,7 @@ public class HomePage implements Initializable{
     @FXML
     public void classroutine(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("table-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Routine.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 
