@@ -6,9 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
 import Server.Server;
 
 public class HelloApplication extends Application {
@@ -35,7 +36,7 @@ public class HelloApplication extends Application {
         // Load the UI icon
         Image uiu = null;
         try {
-            uiu = new Image(new FileInputStream("D:\\project\\src\\main\\resources\\com\\example\\academichubuiu\\Icon UIU_Academic_Hub.png"));
+            uiu = new Image(new FileInputStream("D:\\Mainproject\\src\\main\\resources\\com\\example\\academichubuiu\\Icon UIU_Academic_Hub.png"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -46,6 +47,7 @@ public class HelloApplication extends Application {
     public void stop() throws Exception {
         try {
             TodoData.getInstance().storeTodoItems();
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -54,11 +56,29 @@ public class HelloApplication extends Application {
     @Override
     public void init() throws Exception {
         try {
+            // Load the ArrayList from the file during application initialization
+         Marks.marksarray = (ArrayList<Marks>) loadArrayListFromFile("marksarray.txt");
+
             TodoData.getInstance().loadTodoItems();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
+
+
+    // Load an ArrayList from a file using object deserialization
+    private static List<Marks> loadArrayListFromFile(String filePath) {
+        List<Marks> loadedList = new ArrayList<>();
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(filePath))) {
+            loadedList = (List<Marks>) inputStream.readObject();
+            System.out.println("ArrayList loaded from file successfully.");
+        } catch (IOException | ClassNotFoundException e) {
+            // Log the error message instead of printing the stack trace
+            System.err.println("Error loading ArrayList from file: " + e.getMessage());
+        }
+        return loadedList;
+    }
+
 
     public static void main(String[] args) {
         launch();

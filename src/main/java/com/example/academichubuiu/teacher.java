@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
@@ -41,18 +42,6 @@ public class teacher implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
-    @FXML
-    public void Calculator (ActionEvent event) throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("T_Calculator.fxml"));
-        root = fxmlLoader.load();
-        scene = new Scene(root);
-
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
     @FXML
     public void goTologinpage(ActionEvent event) throws IOException
     {
@@ -68,7 +57,6 @@ public class teacher implements Initializable {
     @FXML
     public void Message(ActionEvent event) throws IOException
     {
-        System.out.println("Work");
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Room.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
@@ -78,10 +66,6 @@ public class teacher implements Initializable {
         stage.show();
 
     }
-
-
-
-
 
     @FXML
     private ImageView myImage;
@@ -108,4 +92,10 @@ public class teacher implements Initializable {
         fade.setToValue(1);
         fade.play();
     }
+
+
+
+
+
+
 }

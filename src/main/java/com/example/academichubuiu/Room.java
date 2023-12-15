@@ -147,7 +147,7 @@ public class Room extends Thread implements Initializable {
                 String msg = reader.readLine();
                 String[] tokens = msg.split(" ");
                 String cmd = tokens[0];
-                System.out.println("check cmd:"+cmd);
+                //System.out.println("check cmd:"+cmd);
                 StringBuilder fulmsg = new StringBuilder();
                 for(int i = 1; i < tokens.length; i++) {
                     fulmsg.append(tokens[i]);
@@ -307,13 +307,32 @@ public class Room extends Thread implements Initializable {
 
     public void gotohome(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
-        root = fxmlLoader.load();
-        scene = new Scene(root);
 
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+
+        if(fullName.getText().equals("Faculty")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
+            root = fxmlLoader.load();
+            scene = new Scene(root);
+
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+        }else{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
+            root = fxmlLoader.load();
+            scene = new Scene(root);
+
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+
+
+        }
+
+
+
     }
 
    /* @FXML

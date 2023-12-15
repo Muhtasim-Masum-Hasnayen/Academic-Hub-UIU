@@ -77,7 +77,7 @@ public class HomePage implements Initializable{
     }
     public void Marks(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CTMarks.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Showmarks.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 

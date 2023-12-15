@@ -48,9 +48,7 @@ public class LoginPage implements Initializable {
         mybox.getSelectionModel().selectFirst();
     }
 
-    public String getMyboxValue() {
-        return mybox.getValue();
-    }
+
 
     @FXML
     private void setRotate(Circle c, boolean reverse, int angle, int duration) {
