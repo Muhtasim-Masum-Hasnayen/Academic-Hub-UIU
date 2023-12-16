@@ -81,7 +81,7 @@ public class teacher implements Initializable {
     @FXML
     public void Message(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Room.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TeacherMessage.fxml"));
         root = fxmlLoader.load();
         scene = new Scene(root);
 

@@ -2,6 +2,7 @@ package com.example.academichubuiu;
 
 //import animatefx.animation.FadeIn;
 //import animatefx.animation.FadeOut;
+
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
@@ -31,7 +32,6 @@ import javafx.scene.transform.Rotate;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-//import org.apache.commons.lang3.StringUtils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -42,7 +42,7 @@ import java.util.ResourceBundle;
 
 import static com.example.academichubuiu.netController.users;
 
-public class Room extends Thread implements Initializable {
+public class TeacherRoom extends Thread implements Initializable {
     @FXML
     public Label clientName;
     @FXML
@@ -309,7 +309,8 @@ public class Room extends Thread implements Initializable {
     {
 
 
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
+
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("teacher.fxml"));
             root = fxmlLoader.load();
             scene = new Scene(root);
 
@@ -318,12 +319,11 @@ public class Room extends Thread implements Initializable {
             stage.show();
 
 
+        }
 
 
 
 
-
-    }
 
    /* @FXML
     private ImageView myImage;

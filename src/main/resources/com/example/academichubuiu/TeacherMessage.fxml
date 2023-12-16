@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Room">
+<AnchorPane prefHeight="560.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.TeacherRoom">
    <children>
       <StackPane layoutY="67.0" prefHeight="494.0" prefWidth="330.0">
          <children>
@@ -118,8 +118,7 @@
                   <ImageView fx:id="myImage" fitHeight="122.0" fitWidth="128.0" layoutX="638.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Only%20logo%20of%20UIU.png" />
-                     </image>
-                  </ImageView>
+                     </image></ImageView>
                   <ImageView fitHeight="155.0" fitWidth="168.0" layoutX="627.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img-786.026dad4339162df56a05.png" />
