@@ -1,0 +1,24 @@
+.list-view .list-cell:even {
+-fx-background-color: #FFFFFF;
+-fx-text-fill: black;
+-fx-font-size: 24px;
+ -fx-font-family: 'Berlin Sans FB';
+-fx-border-color : #FFFFFF;
+}
+.list-view .list-cell:odd {
+-fx-background-color: #FFFFFF;
+-fx-text-fill: black;
+-fx-font-size: 24px;
+-fx-font-family: 'Berlin Sans FB';
+-fx-border-color : #FFFFFF;
+}
+.progress-bar .bar {
+    -fx-background-color: #7988F2;
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em; /* 5 */
+}
+
+#header{
+ -fx-border-radius: 15 15 0 0;
+   -fx-background-radius: 15 15 0 0;
+}

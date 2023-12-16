@@ -125,5 +125,6 @@
             <Image url="@8175061.png" />
          </image>
       </ImageView>
+      <Button layoutX="75.0" layoutY="383.0" mnemonicParsing="false" onAction="#timer" text="Button" />
    </children>
 </AnchorPane>

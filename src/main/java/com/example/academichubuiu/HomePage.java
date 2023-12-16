@@ -14,8 +14,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -116,8 +118,34 @@ public class HomePage implements Initializable{
         stage.show();
 
     }
+    private double xOffset, yOffset;
+    @FXML
+    public void timer(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StopWatch.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        //Stage stage = new Stage();
+//        stage.initStyle(StageStyle.UNDECORATED);
+//        stage.initStyle(StageStyle.TRANSPARENT);  // Set the style before making the stage visible
+        stage.setScene(scene);
+        stage.setResizable(false);
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 
+//        // Mouse drag functionality
+//        root.setOnMousePressed(mouseEvent -> {
+//            xOffset = mouseEvent.getSceneX();
+//            yOffset = mouseEvent.getSceneY();
+//        });
+//
+//        root.setOnMouseDragged(mouseEvent -> {
+//            stage.setX(mouseEvent.getScreenX() - xOffset);
+//            stage.setY(mouseEvent.getScreenY() - yOffset);
+//        });
 
+        stage.show();  // The stage is made visible after setting the style
+    }
 
 
 
