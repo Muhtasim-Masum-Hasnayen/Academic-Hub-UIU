@@ -1,8 +1,6 @@
 package com.example.academichubuiu;
 
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +17,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -54,12 +53,19 @@ public class TimerController implements Initializable {
     int lapsCounter;
     ObservableList<TimerLap> laps = FXCollections.observableArrayList();
 
+    @FXML
+    private ImageView myImage;
+    @FXML
+    private ImageView bookImage;
+    @FXML
+    private ImageView clockImage;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         timeline = new Timeline(new KeyFrame(Duration.millis(1000), ae -> incrementTime()));
         timeline.setCycleCount(Animation.INDEFINITE);
         progress.setProgress(0);
-        enableDisableControls(true, btnPause);
+        //enableDisableControls(true, btnPause);
         lapsData.setCellFactory(listView -> new ListCell<TimerLap>() {
             @Override
             protected void updateItem(TimerLap lap, boolean empty) {
@@ -69,7 +75,7 @@ public class TimerController implements Initializable {
                 } else {
                     // Create a HBox to hold our displayed value
                     HBox hBox = new HBox(5);
-                    hBox.setAlignment(Pos.CENTER);
+                    //hBox.setAlignment(Pos.CENTER);
                     hBox.setSpacing(15);
                     // Add the values from our piece to the HBox
                     hBox.getChildren().addAll(
@@ -78,9 +84,41 @@ public class TimerController implements Initializable {
                     );
                     // Set the HBox as the display
                     setGraphic(hBox);
+
+
+
     }
 }
         });
+
+
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(myImage);
+        rotate.setDuration(Duration.millis(6000));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
+
+        FadeTransition fade = new FadeTransition();
+        fade.setNode(bookImage);
+        fade.setDuration(Duration.millis(5000));
+        fade.setCycleCount(TranslateTransition.INDEFINITE);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
+
+        RotateTransition rotate2 = new RotateTransition();
+        rotate2.setNode(clockImage);
+        rotate2.setDuration(Duration.millis(4000));
+        rotate2.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate2.setInterpolator(Interpolator.LINEAR);
+        rotate2.setByAngle(360);
+        rotate2.setAxis(Rotate.Z_AXIS);
+        rotate2.play();
+
     }
     @FXML
     private Stage stage;
@@ -104,18 +142,20 @@ public class TimerController implements Initializable {
 
     @FXML
     private void startTimer() {
-        enableDisableControls(false, btnLap);
-        enableDisableControls(true, btnStart);
-        enableDisableControls(false, btnPause);
+
+
+//        enableDisableControls(true, btnLap);
+//        enableDisableControls(true, btnStart);
+//        enableDisableControls(false, btnPause);
         timeline.play();
-        progress.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
+       // progress.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
     }
 
     @FXML
     private void pauseTimer(MouseEvent event) {
         progress.setProgress(0);
-        enableDisableControls(true, btnLap);
-        enableDisableControls(false, btnStart);
+//        enableDisableControls(true, btnLap);
+//        enableDisableControls(false, btnStart);
         if (timeline.getStatus().equals(Animation.Status.PAUSED)) {
             timeline.play();
         } else if (timeline.getStatus().equals(Animation.Status.RUNNING)) {
@@ -125,9 +165,9 @@ public class TimerController implements Initializable {
 
     @FXML
     private void endTimer(MouseEvent mouseEvent) {
-        enableDisableControls(true, btnLap);
-        enableDisableControls(false, btnStart);
-        enableDisableControls(true, btnPause);
+//        enableDisableControls(true, btnLap);
+//        enableDisableControls(false, btnStart);
+//        enableDisableControls(true, btnPause);
         lapsCounter = 0;
         lapsData.getItems().clear();
         progress.setProgress(0);
@@ -146,7 +186,7 @@ public class TimerController implements Initializable {
         lapsCounter += 1;
         tempTime = tempTime.plusHours(time.getHour()).plusMinutes(time.getMinute()).plusSeconds(time.getSecond());
         ImageView imageView = new ImageView();
-        System.out.println("PATH ->" + System.getProperty("user.dir") + "\\src\\Sample\\grayFlag.png");
+        //System.out.println("PATH ->" + System.getProperty("user.dir") + "\\src\\Sample\\grayFlag.png");
         imageView.setImage(new Image(new File(System.getProperty("user.dir") + "\\src\\Sample\\grayFlag.png").toURI().toString()));
         imageView.setFitWidth(25);
         imageView.setFitHeight(25);

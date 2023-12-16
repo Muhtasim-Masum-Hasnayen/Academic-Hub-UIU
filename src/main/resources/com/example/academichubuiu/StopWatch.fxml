@@ -9,29 +9,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="707.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.TimerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #C5CAE9; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.TimerController">
    <children>
-      <AnchorPane fx:id="header" prefHeight="50.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="10.0" prefHeight="31.0" prefWidth="186.0" spacing="10.0">
-               <children>
-                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@vnsgw8vl.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Stopwatch" textFill="WHITE">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </AnchorPane>
-      <VBox alignment="CENTER_LEFT" layoutX="43.0" layoutY="60.0" prefHeight="87.0" prefWidth="540.0">
+      <AnchorPane fx:id="header" layoutX="499.0" layoutY="9.0" prefHeight="50.0" prefWidth="138.0" />
+      <VBox alignment="CENTER_LEFT" layoutX="176.0" layoutY="60.0" prefHeight="87.0" prefWidth="522.0">
          <children>
             <Label fx:id="lblTimer" text="00:00:00">
                <font>
@@ -45,32 +30,52 @@
             </Label>
          </children>
       </VBox>
-      <ListView fx:id="lapsData" layoutX="14.0" layoutY="175.0" prefHeight="277.0" prefWidth="569.0" style="-fx-background-color: #FFFFFF;" />
-      <HBox alignment="CENTER" layoutX="14.0" layoutY="461.0" prefHeight="62.0" prefWidth="569.0" spacing="50.0">
+      <ListView fx:id="lapsData" layoutX="169.0" layoutY="175.0" prefHeight="278.0" prefWidth="533.0" style="-fx-background-color: #C5CAE9;" />
+      <HBox alignment="CENTER" layoutX="270.0" layoutY="461.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="386.0" spacing="50.0">
          <children>
             <ImageView fx:id="btnStart" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#startTimer" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@play.png" />
+                  <Image url="@play-button-hi.png" />
                </image>
             </ImageView>
             <ImageView fx:id="btnPause" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#pauseTimer" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pause.png" />
+                  <Image url="@PausE%20Butn.png" />
                </image>
             </ImageView>
             <ImageView fx:id="btnStop" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#endTimer" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@board-meeting.png" />
+                  <Image url="@RESET%20BUTTON_PNG.png" />
                </image>
             </ImageView>
             <ImageView fx:id="btnLap" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#addLaps" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@flag.png" />
+                  <Image url="@R%20(2).png" />
                </image>
             </ImageView>
          </children>
       </HBox>
-      <ProgressBar fx:id="progress" layoutX="-1.0" layoutY="158.0" prefHeight="8.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Button layoutX="527.0" layoutY="523.0" mnemonicParsing="false" onAction="#gotohomepage" text="Back" />
+      <Button layoutX="687.0" layoutY="555.0" mnemonicParsing="false" onAction="#gotohomepage" prefHeight="30.0" prefWidth="99.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="600.0" stroke="BLACK" strokeType="INSIDE" width="153.0" />
+      <Circle fill="#9fa8da" layoutX="76.0" layoutY="79.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+      <ImageView fx:id="myImage" fitHeight="89.0" fitWidth="89.0" layoutX="32.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Only%20logo%20of%20UIU.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bookImage" fitHeight="81.0" fitWidth="98.0" layoutX="33.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@8175061.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="progress" layoutX="152.8" layoutY="158.0" prefHeight="12.0" prefWidth="553.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="153.0" AnchorPane.rightAnchor="1.0" />
+      <ImageView fx:id="clockImage" fitHeight="73.0" fitWidth="77.0" layoutX="703.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@vnsgw8vl.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
