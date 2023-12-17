@@ -141,25 +141,15 @@
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <Button fx:id="profileBtn" layoutX="707.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleProfileBtn" style="-fx-background-color: #c5cae9;" styleClass="allButton" stylesheets="@Style.css" text="Profile">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Button>
             <Circle fx:id="showProPic" fill="#c5cae9" layoutX="34.0" layoutY="35.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
             <ImageView fitHeight="60.0" fitWidth="74.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@male_user_30px.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="classroomImage" fitHeight="67.0" fitWidth="77.0" layoutX="170.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="67.0" fitWidth="77.0" layoutX="170.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@classroom_100px.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="bookImage" fitHeight="67.0" fitWidth="51.0" layoutX="252.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@books_100px.png" />
                </image>
             </ImageView>
          </children>
