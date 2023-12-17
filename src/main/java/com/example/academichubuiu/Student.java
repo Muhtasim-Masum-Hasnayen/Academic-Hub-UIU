@@ -1,8 +1,9 @@
 package com.example.academichubuiu;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Student {
+public class Student implements Serializable {
     private String studentName;
     private String studentId;
     private String studentEmail;

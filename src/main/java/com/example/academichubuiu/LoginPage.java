@@ -36,6 +36,7 @@ public class LoginPage implements Initializable {
     @FXML
     private Button play;
     public static String cid;
+    public static String userid;
 
     @FXML
      ChoiceBox<String> mybox;
@@ -85,6 +86,12 @@ public class LoginPage implements Initializable {
         stage.show();
     }
 
+    public static String getid(){
+        String id=userid;
+
+
+        return id;
+    }
     public void goToForgetPassPage(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ForgetPassword.fxml"));
         root = fxmlLoader.load();
@@ -141,6 +148,7 @@ public class LoginPage implements Initializable {
                 if (mstudentId.equals(studentId) && mpassword.equals(password)) {
                     loginSuccessful = true;
                     break;
+
                 }
             }
 
@@ -149,6 +157,7 @@ public class LoginPage implements Initializable {
         }
 
         if (loginSuccessful) {
+            userid=mstudentId;
             try {
 //                try (BufferedWriter writer = new BufferedWriter(new FileWriter("check.txt"))) {
 //                    // Append the student data to the file

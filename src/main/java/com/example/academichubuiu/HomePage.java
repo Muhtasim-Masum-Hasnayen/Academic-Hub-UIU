@@ -32,6 +32,13 @@ public class HomePage implements Initializable{
     private Scene scene;
     @FXML
     private Parent root;
+
+    public static String getStudentId() {
+        return studentId;
+    }
+
+    private static String studentId;
+
     @FXML
     public void calculator(ActionEvent event) throws IOException
     {
@@ -43,6 +50,11 @@ public class HomePage implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
+
+
+
+
+
     @FXML
     public void classroutine(ActionEvent event) throws IOException
     {
@@ -54,28 +66,7 @@ public class HomePage implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    @FXML
-    public void chart(ActionEvent event) throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SResult.fxml"));
-        root = fxmlLoader.load();
-        scene = new Scene(root);
 
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
-    @FXML
-    public void note(ActionEvent event) throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Note.fxml"));
-        root = fxmlLoader.load();
-        scene = new Scene(root);
-
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
 
 
     public void TaskManagement(ActionEvent event) throws IOException
@@ -129,6 +120,21 @@ public class HomePage implements Initializable{
         stage.show();
 
     }
+@FXML
+    public void Profile(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Profile.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
+
     private double xOffset, yOffset;
     @FXML
     public void timer(ActionEvent event) throws IOException {
@@ -171,6 +177,8 @@ public class HomePage implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+         studentId = LoginPage.getid();
+        System.out.println(studentId);
         RotateTransition rotate = new RotateTransition();
         rotate.setNode(myImage);
         rotate.setDuration(Duration.millis(6000));
