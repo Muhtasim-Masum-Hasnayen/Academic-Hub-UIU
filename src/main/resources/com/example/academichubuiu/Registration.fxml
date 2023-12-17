@@ -16,12 +16,12 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #C5CAE9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Registration">
    <children>
       <TextField fx:id="studentid" layoutX="358.0" layoutY="291.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="280.0" promptText="ID" style="-fx-background-color: #E1F5FE;" />
-      <Button layoutX="357.0" layoutY="473.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerStudent" prefHeight="37.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Register">
+      <Button layoutX="357.0" layoutY="510.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerStudent" prefHeight="37.0" prefWidth="280.0" style="-fx-background-color: Orange; -fx-background-radius: 90;" text="Register">
          <font>
             <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
-      <PasswordField fx:id="password" layoutX="358.0" layoutY="399.0" prefHeight="26.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
+      <PasswordField fx:id="password" layoutX="358.0" layoutY="429.0" prefHeight="26.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #E1F5FE;" />
       <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="309.0" layoutY="-64.0">
          <image>
             <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
@@ -33,7 +33,7 @@
          </font>
       </Label>
       <TextField fx:id="email" layoutX="359.0" layoutY="328.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="280.0" promptText="E-mail" style="-fx-background-color: #E1F5FE;" />
-      <PasswordField fx:id="confirmpassword" layoutX="357.0" layoutY="433.0" prefHeight="26.0" prefWidth="280.0" promptText="Confirm Password" style="-fx-background-color: #E1F5FE;" />
+      <PasswordField fx:id="confirmpassword" layoutX="348.0" layoutY="465.0" prefHeight="26.0" prefWidth="280.0" promptText="Confirm Password" style="-fx-background-color: #E1F5FE;" />
       <Text layoutX="367.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Form">
          <font>
             <Font name="Times New Roman Bold" size="33.0" />
@@ -52,6 +52,7 @@
             <Image url="@Only%20logo%20of%20UIU.png" />
          </image>
       </ImageView>
-      <TextField layoutX="358.0" layoutY="364.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="280.0" promptText="Phone Number" style="-fx-background-color: #E1F5FE;" />
+      <TextField fx:id="number" layoutX="358.0" layoutY="364.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="280.0" promptText="Phone Number" style="-fx-background-color: #E1F5FE;" />
+      <TextField fx:id="name" layoutX="348.0" layoutY="401.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="280.0" promptText="Name" style="-fx-background-color: #E1F5FE;" />
    </children>
 </AnchorPane>

@@ -6,12 +6,22 @@ public class Student {
     private String studentName;
     private String studentId;
     private String studentEmail;
+    private String phonenumber;
 
-    public Student(String studentName, String studentId, String studentEmail, ArrayList<String> courseCode) {
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public Student(String studentName, String studentId, String studentEmail, String phonenumber) {
         this.studentName = studentName;
         this.studentId = studentId;
         this.studentEmail = studentEmail;
-        CourseCode = courseCode;
+        this.phonenumber = phonenumber;
+        this.CourseCode = new ArrayList<>();
     }
 
     public String getStudentName() {
@@ -46,7 +56,18 @@ public class Student {
         CourseCode = courseCode;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentName='" + studentName + '\'' +
+                ", studentId='" + studentId + '\'' +
+                ", studentEmail='" + studentEmail + '\'' +
+                ", phonenumber='" + phonenumber + '\'' +
+                ", CourseCode=" + CourseCode +
+                '}';
+    }
+
     ArrayList<String>CourseCode=new ArrayList<>();
-public static ArrayList<Student>Student=new ArrayList<>();
+public static ArrayList<Student>Studentarray=new ArrayList<>();
 
 }

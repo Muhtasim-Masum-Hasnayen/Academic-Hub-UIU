@@ -73,6 +73,11 @@ public class Registration implements Initializable {
     TextField password = new TextField();
     @FXML
     TextField confirmpassword = new TextField();
+    @FXML
+    TextField name = new TextField();;
+    @FXML
+    TextField number = new TextField();;
+
 
 
     @FXML
@@ -84,6 +89,8 @@ public class Registration implements Initializable {
         String emailAddress = email.getText();
 
         String mpassword = password.getText();
+        String Name=name.getText();
+        String Number=number.getText();
 
         String confirmPassword = confirmpassword.getText();
         //System.out.println("in rs" + studentId+emailAddress+mpassword);
@@ -92,6 +99,9 @@ public class Registration implements Initializable {
             //  System.out.println("in if" + studentId+emailAddress+mpassword);
             // Registration successful
             showMessage("Registration successful", "Registration");
+            Student s1=new Student(Name,studentId,emailAddress,Number);
+            Student.Studentarray.add(s1);
+            System.out.println(s1);
             saveStudentData(studentId, emailAddress, mpassword);
 
 

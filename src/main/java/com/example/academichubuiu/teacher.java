@@ -69,7 +69,7 @@ public class teacher implements Initializable {
     }
     @FXML
     public void timer(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StopWatch.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TimerTeacher.fxml"));
         root = fxmlLoader.load();
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
