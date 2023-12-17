@@ -30,37 +30,12 @@
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="122.0" layoutY="200.0" prefHeight="34.0" prefWidth="74.0" text="Gender:" textFill="#e4e4e4">
-               <font>
-                  <Font name="Arial" size="19.0" />
-               </font>
-            </Label>
-            <Label fx:id="fullName" layoutX="244.0" layoutY="88.0" opacity="0.0" textFill="#f2f2f2" wrapText="true">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label fx:id="email" layoutX="244.0" layoutY="128.0" opacity="0.0" textFill="#f2f2f2">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <Label fx:id="phoneNo" layoutX="244.0" layoutY="169.0" textFill="#f2f2f2">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <Label fx:id="gender" layoutX="244.0" layoutY="207.0" textFill="#f2f2f2">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="proImage" fitHeight="194.0" fitWidth="200.0" layoutX="487.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="proImage" fitHeight="194.0" fitWidth="200.0" layoutX="526.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../java/icons/user.png" />
                </image>
             </ImageView>
-            <Label layoutX="122.0" layoutY="245.0" text="Change Profile Picture:" textFill="#f8f5f5">
+            <Label layoutX="122.0" layoutY="245.0" text="Profile Picture:" textFill="#f8f5f5">
                <font>
                   <Font size="19.0" />
                </font>
@@ -75,11 +50,14 @@
                   <Font name="Arial" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="233.0" layoutY="392.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" styleClass="allButton" stylesheets="@Style.css" text="Save">
+            <Button layoutX="313.0" layoutY="392.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" styleClass="allButton" stylesheets="@Style.css" text="Save">
                <font>
                   <Font name="Arial" size="19.0" />
                </font>
             </Button>
+            <TextField alignment="CENTER" layoutX="221.0" layoutY="87.0" prefHeight="25.0" prefWidth="267.0" promptText="Enter Full Name" style="-fx-background-color: #455a64;" />
+            <TextField alignment="CENTER" layoutX="220.0" layoutY="126.0" prefHeight="25.0" prefWidth="267.0" promptText="Enter E-mail Address" style="-fx-background-color: #455a64;" />
+            <TextField alignment="CENTER" layoutX="219.0" layoutY="165.0" prefHeight="25.0" prefWidth="267.0" promptText="Enter Phone Number" style="-fx-background-color: #455a64;" />
          </children>
       </Pane>
       <AnchorPane layoutX="-2.0" layoutY="-1.0" minWidth="-Infinity" prefHeight="80.0" prefWidth="806.0" style="-fx-background-color: #5c6bc0;">
