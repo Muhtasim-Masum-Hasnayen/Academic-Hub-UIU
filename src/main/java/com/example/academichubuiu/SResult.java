@@ -53,8 +53,8 @@ public class SResult implements Initializable {
     void OnAdd(ActionEvent event) {
 
         String name = txtname.getText();
-        double marks = new Integer(txtmarks.getText()).doubleValue();
-        String id=txtmarks.getText();
+        //double marks = new Integer(txtmarks.getText()).doubleValue();
+        String id=HomePage.getStudentId();
 
         int ct=Marks.ctmarkcount(name,id);
         System.out.println(ct);
