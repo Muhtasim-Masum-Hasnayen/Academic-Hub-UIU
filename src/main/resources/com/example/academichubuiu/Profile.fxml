@@ -11,36 +11,36 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Profile">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #C5CAE9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.Profile">
    <children>
-      <Pane fx:id="profile" layoutX="154.0" layoutY="100.0" prefHeight="500.0" prefWidth="647.0" style="-fx-background-color: #263238;">
+      <Pane fx:id="profile" layoutX="154.0" layoutY="138.0" prefHeight="462.0" prefWidth="647.0" style="-fx-background-color: #C5CAE9;">
          <children>
-            <Label layoutX="124.0" layoutY="88.0" text="Full Name: " textFill="#e1dfdf">
+            <Label layoutX="133.0" layoutY="128.0" text="Full Name: ">
                <font>
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="124.0" layoutY="128.0" text="E-mail:" textFill="#eee5e5">
+            <Label layoutX="134.0" layoutY="168.0" text="E-mail      :">
                <font>
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="123.0" layoutY="168.0" text="Phone No:" textFill="#ebe7e7">
+            <Label layoutX="132.0" layoutY="208.0" text="Phone No:">
                <font>
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <ImageView fx:id="proImage" fitHeight="194.0" fitWidth="200.0" layoutX="445.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="proImage" fitHeight="194.0" fitWidth="200.0" layoutX="445.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../java/icons/user.png" />
                </image>
             </ImageView>
-            <Label layoutX="122.0" layoutY="245.0" text="Profile Picture:" textFill="#f8f5f5">
+            <Label layoutX="122.0" layoutY="245.0" text="Profile Picture:">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
-            <TextField fx:id="fileChoosePath" editable="false" layoutX="124.0" layoutY="280.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." style="-fx-background-color: #455a64;" styleClass="textField" stylesheets="@Style.css">
+            <TextField fx:id="fileChoosePath" editable="false" layoutX="124.0" layoutY="280.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." styleClass="textField" stylesheets="@Style.css">
                <font>
                   <Font size="15.0" />
                </font>
@@ -55,25 +55,36 @@
                   <Font name="Arial" size="19.0" />
                </font>
             </Button>
-            <TextField fx:id="name" alignment="CENTER" layoutX="221.0" layoutY="87.0" prefHeight="25.0" prefWidth="210.0" promptText="Full Name" style="-fx-background-color: #455a64;" />
-            <TextField fx:id="email" alignment="CENTER" layoutX="220.0" layoutY="126.0" prefHeight="25.0" prefWidth="210.0" promptText="E-mail Address" style="-fx-background-color: #455a64;" />
-            <TextField fx:id="number" alignment="CENTER" layoutX="219.0" layoutY="165.0" prefHeight="25.0" prefWidth="210.0" promptText="Phone Number" style="-fx-background-color: #455a64;" />
+            <TextField fx:id="name" alignment="CENTER" layoutX="230.0" layoutY="127.0" prefHeight="25.0" prefWidth="210.0" promptText="Full Name" />
+            <TextField fx:id="email" alignment="CENTER" layoutX="229.0" layoutY="166.0" prefHeight="25.0" prefWidth="210.0" promptText="E-mail Address" />
+            <TextField fx:id="number" alignment="CENTER" layoutX="228.0" layoutY="205.0" prefHeight="25.0" prefWidth="210.0" promptText="Phone Number" />
+            <AnchorPane layoutX="23.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="77.0" style="-fx-background-color: #C5CAE9;">
+               <children>
+                  <TextField fx:id="userid" alignment="CENTER" layoutX="206.0" layoutY="25.0" prefHeight="26.0" prefWidth="210.0" promptText="Student ID" />
+               </children>
+            </AnchorPane>
          </children>
       </Pane>
-      <AnchorPane layoutX="154.0" layoutY="-1.0" minWidth="-Infinity" prefHeight="143.0" prefWidth="647.0" style="-fx-background-color: #5c6bc0;">
-         <children>
-            <TextField fx:id="userid" layoutX="220.0" layoutY="102.0" />
-         </children></AnchorPane>
       <Button layoutX="676.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gotoThome" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="16.0" />
          </font>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="156.0" />
-      <Circle fill="#9fa8da" layoutX="80.0" layoutY="81.0" radius="78.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-      <ImageView fx:id="myImage" fitHeight="109.0" fitWidth="127.0" layoutX="21.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+      <Circle fill="#9fa8da" layoutX="67.0" layoutY="69.0" radius="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+      <ImageView fx:id="myImage" fitHeight="99.0" fitWidth="90.0" layoutX="22.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Only%20logo%20of%20UIU.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="279.0" layoutY="227.0" text="Student ID :">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="281.0" fitWidth="401.0" layoutX="279.0" layoutY="-68.0">
+         <image>
+            <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
          </image>
       </ImageView>
    </children>
