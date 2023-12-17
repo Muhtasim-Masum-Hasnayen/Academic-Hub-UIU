@@ -29,7 +29,7 @@
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="600.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <Circle fill="#9fa8da" layoutX="96.0" layoutY="81.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-      <Button layoutX="17.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
+      <Button layoutX="17.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Tclassroutine" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
@@ -39,27 +39,27 @@
             <Image url="@Only%20logo%20of%20UIU.png" />
          </image>
       </ImageView>
-      <Button layoutX="255.0" layoutY="379.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Message" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling Schedule">
+      <Button alignment="CENTER" layoutX="506.0" layoutY="253.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Message" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling ">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="66.0" fitWidth="48.0" layoutX="460.0" layoutY="388.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="66.0" fitWidth="48.0" layoutX="711.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@menu_vertical_50px.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="252.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="503.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@classroom_100px.png" />
          </image>
       </ImageView>
-      <Button layoutX="252.0" layoutY="212.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#StudentProgress" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Student Progress">
+      <Button layoutX="215.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#StudentProgress" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Student Progress">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="66.0" fitWidth="48.0" layoutX="458.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="66.0" fitWidth="48.0" layoutX="421.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@menu_vertical_50px.png" />
          </image>
@@ -79,44 +79,34 @@
             <Font name="Bell MT" size="12.0" />
          </font>
       </Text>
-      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="259.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="222.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@account_48px.png" />
          </image>
       </ImageView>
-      <Button layoutX="253.0" layoutY="293.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#AddingMarks" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Adding Marks">
+      <Button layoutX="220.0" layoutY="352.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#AddingMarks" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Adding Marks">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="66.0" fitWidth="48.0" layoutX="459.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="66.0" fitWidth="48.0" layoutX="426.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@menu_vertical_50px.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="74.0" fitWidth="58.0" layoutX="249.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="74.0" fitWidth="58.0" layoutX="216.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@report_card_100px.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="25.0" layoutX="296.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="40.0" fitWidth="25.0" layoutX="263.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@grades_30px.png" />
          </image>
       </ImageView>
-      <Button layoutX="15.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Note" textFill="WHITE">
-         <font>
-            <Font name="Ebrima Bold" size="12.0" />
-         </font>
-      </Button>
       <ImageView fitHeight="218.0" fitWidth="274.0" layoutX="73.0" layoutY="388.0" onDragDetected="#Message" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@PrivateLimitedCompany1.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="231.0" fitWidth="264.0" layoutX="525.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@board-meeting.png" />
          </image>
       </ImageView>
       <Button layoutX="16.0" layoutY="306.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Calculator" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Calculator" textFill="WHITE">
@@ -124,10 +114,25 @@
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="17.0" layoutY="357.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#timer" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Timer" textFill="WHITE">
+      <Button layoutX="17.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#timer" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Timer" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
+      <Button alignment="CENTER" layoutX="510.0" layoutY="356.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#TCounsellingScedule" prefHeight="66.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Counselling Schedule">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="66.0" fitWidth="48.0" layoutX="715.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menu_vertical_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="58.0" layoutX="511.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@vnsgw8vl.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

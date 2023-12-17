@@ -29,11 +29,6 @@
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="17.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#note" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Note" textFill="WHITE">
-         <font>
-            <Font name="Ebrima Bold" size="12.0" />
-         </font>
-      </Button>
       <Button layoutX="17.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#classroutine" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
@@ -125,7 +120,7 @@
             <Image url="@8175061.png" />
          </image>
       </ImageView>
-      <Button layoutX="16.0" layoutY="366.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#timer" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Timer" textFill="WHITE">
+      <Button layoutX="16.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#timer" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Timer" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>

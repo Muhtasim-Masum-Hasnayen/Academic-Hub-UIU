@@ -120,6 +120,31 @@ public class teacher implements Initializable {
     }
 
     @FXML
+    public void Tclassroutine(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TclassRoutine.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void TCounsellingScedule (ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TCounsellingScedule.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+    @FXML
     private ImageView myImage;
     @FXML
     private ImageView bookImage;
