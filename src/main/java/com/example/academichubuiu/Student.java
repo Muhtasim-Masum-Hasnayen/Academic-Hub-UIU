@@ -67,6 +67,7 @@ public class Student {
                 '}';
     }
 
+
     ArrayList<String>CourseCode=new ArrayList<>();
 public static ArrayList<Student>Studentarray=new ArrayList<>();
 
