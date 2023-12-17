@@ -118,6 +118,19 @@ String id=HomePage.getStudentId();
 
 
 
+    public void gotoThome(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
+        root = fxmlLoader.load();
+        scene = new Scene(root);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
     public void handleProfileBtn(ActionEvent event) {
         if (event.getSource().equals(profileBtn) && !toggleProfile) {
             // new FadeIn(profile).play();
@@ -189,6 +202,17 @@ userid.setText(id);
 
 
 }
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(myImage);
+        rotate.setDuration(Duration.millis(6000));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
 
     }
+
+
+
 }

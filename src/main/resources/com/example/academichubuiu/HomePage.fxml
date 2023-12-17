@@ -29,12 +29,12 @@
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="17.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#classroutine" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
+      <Button layoutX="17.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#classroutine" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Class Routine" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="18.0" layoutY="316.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Marks" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Marks" textFill="WHITE">
+      <Button layoutX="18.0" layoutY="365.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Marks" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Marks" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
@@ -120,11 +120,20 @@
             <Image url="@8175061.png" />
          </image>
       </ImageView>
-      <Button layoutX="16.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#timer" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Timer" textFill="WHITE">
+      <Button layoutX="16.0" layoutY="312.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#timer" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Timer" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="70.0" layoutY="163.0" mnemonicParsing="false" onAction="#Profile" text="Button" />
+      <Button layoutX="16.0" layoutY="415.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#chart" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Chart" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="16.0" layoutY="211.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Profile" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Profile" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

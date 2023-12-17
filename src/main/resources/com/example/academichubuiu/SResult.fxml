@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #C5CAE9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.SResult">
+    <children>
+        <PieChart fx:id="ChartPie" layoutX="150.0" layoutY="210.0" prefHeight="321.0" prefWidth="342.0" style="-fx-background-color: #C5CAE9; -fx-background-radius: 0;" />
+        <Label layoutX="494.0" layoutY="202.0" text="Course Code :">
+            <font>
+                <Font name="Times New Roman" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtname" alignment="CENTER" layoutX="608.0" layoutY="203.0" prefHeight="26.0" prefWidth="120.0" promptText="Course Code" />
+        <Button fx:id="btnAdd" layoutX="623.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnAdd" prefHeight="3.0" prefWidth="81.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Enter" textFill="#fff3f3">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Button>
+        <ScrollPane layoutX="510.0" layoutY="363.0" prefHeight="172.0" prefWidth="218.0">
+            <content>
+                <TextArea fx:id="taChartDataDisplay" prefHeight="231.0" prefWidth="200.0" />
+            </content>
+        </ScrollPane>
+        <Label layoutX="512.0" layoutY="325.0" prefHeight="27.0" prefWidth="165.0" text="Current Chart Data :">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="600.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+        <Circle fill="#9fa8da" layoutX="71.0" layoutY="81.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+        <Button layoutX="678.0" layoutY="556.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gotoThome" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+            <font>
+                <Font name="Ebrima Bold" size="16.0" />
+            </font>
+        </Button>
+        <ImageView fx:id="myImage" fitHeight="89.0" fitWidth="89.0" layoutX="27.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Only%20logo%20of%20UIU.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="bookImage" fitHeight="81.0" fitWidth="98.0" layoutX="30.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@8175061.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="255.0" fitWidth="358.0" layoutX="287.0" layoutY="-63.0">
+            <image>
+                <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
