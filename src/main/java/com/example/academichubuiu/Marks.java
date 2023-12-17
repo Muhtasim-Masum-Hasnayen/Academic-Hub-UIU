@@ -2,6 +2,7 @@ package com.example.academichubuiu;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Marks implements Serializable {
     private String coursecode;
@@ -88,4 +89,122 @@ public class Marks implements Serializable {
     }
 
     public static ArrayList<Marks> marksarray = new ArrayList<>();
+
+
+    public static int ctmarkcount(String course, String id) {
+        int avgmark = 0;
+
+        for (int i = 0; i < Marks.marksarray.size(); i++) {
+
+            if (course.equalsIgnoreCase(marksarray.get(i).getCoursecode()) && id.equals(marksarray.get(i).getStudentid())) {
+               int count;
+                System.out.println("Right");
+                String[] ctt=new String[4];
+
+               ctt[0]=marksarray.get(i).getCt1();
+               ctt[1]=marksarray.get(i).getCt2();
+               ctt[2]=marksarray.get(i).getCt3();
+               ctt[3]=marksarray.get(i).getCt4();
+
+                System.out.println(ctt[0]+ctt[1]+ctt[2]+ctt[3]);
+                for(int m=0;m<4;m++) {
+                    if(ctt[m].isEmpty()){
+                        System.out.println("Check");
+                        ctt[m]="0";
+                    }
+                }
+                System.out.println("after null"+ctt[0]+ctt[1]+ctt[2]+ctt[3]);
+
+
+     int [] ct=new int[4];
+
+                    try {
+                        ct[0] = Integer.parseInt(ctt[0]);
+                        ct[1] = Integer.parseInt(ctt[1]);
+                        ct[2] = Integer.parseInt(ctt[2]);
+                        ct[3] = Integer.parseInt(ctt[3]);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid number format");
+                    }
+               // Arrays.sort(ct);
+                System.out.println("orginal"+ct[0]+ct[1]+ct[2]+ct[3]);
+
+                 count = 0;
+                for (int p = 0; p < 4; p++) {
+                    if (ct[p]>0) {
+                        count++;
+                    }
+                }
+                    System.out.println(count);
+
+                for (int p = 0; p < 4; p++) {
+
+                        avgmark=avgmark+ct[p];
+                    }
+
+                avgmark=  avgmark/count;
+
+
+                break;
+                }
+
+
+            }
+
+
+
+        return avgmark+1;
+    }
+
+//    public static int assmarkcount(String course, String id){
+//        int ass=0;
+//
+//
+//        for (int i = 0; i < Marks.marksarray.size(); i++) {
+//
+//            if (course.equalsIgnoreCase(marksarray.get(i).getCoursecode()) && id.equals(marksarray.get(i).getStudentid())) {
+//                int count;
+//                //System.out.println("Right");
+//                String[] ctt=new String[2];
+//
+//                ctt[0]=marksarray.get(i).getAssignment1();
+//                ctt[1]=marksarray.get(i).getAssignment2();
+//
+//
+//
+//
+//
+//                int [] ct=new int[2];
+//
+//                try {
+//                    ct[0] = Integer.parseInt(ctt[0]);
+//                    ct[1] = Integer.parseInt(ctt[1]);
+//
+//                } catch (NumberFormatException e) {
+//                    System.out.println("Invalid number format");
+//                }
+//
+//
+//
+//
+//              ass=ct[0]+ct[1];
+//
+//ass=ass/2;
+//                break;
+//            }
+//
+//
+//        }
+//
+//
+//
+//        return ass;
+//    }
+//
+//
+
+
+
+
 }
+
