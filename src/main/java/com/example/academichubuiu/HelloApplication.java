@@ -47,18 +47,29 @@ public class HelloApplication extends Application {
     public void stop() throws Exception {
         try {
             TodoData.getInstance().storeTodoItems();
+            saveData();
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
+
+    public static void saveData() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("StudentReg.txt"))) {
+            oos.writeObject(Student.Studentarray);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @Override
     public void init() throws Exception {
         try {
             // Load the ArrayList from the file during application initialization
          Marks.marksarray = (ArrayList<Marks>) loadArrayListFromFile("marksarray.txt");
-
+            loadData();
             TodoData.getInstance().loadTodoItems();
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -77,6 +88,14 @@ public class HelloApplication extends Application {
             System.err.println("Error loading ArrayList from file: " + e.getMessage());
         }
         return loadedList;
+    }
+    public static void loadData() {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("StudentReg.txt"))) {
+            Student.Studentarray = (ArrayList<Student>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            // Handle exceptions, e.g., if the file doesn't exist yet
+            e.printStackTrace();
+        }
     }
 
 
