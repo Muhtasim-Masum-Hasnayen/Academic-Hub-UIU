@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.academichubuiu.messageReq">
+   <children>
+      <TableView fx:id="table" editable="true" layoutY="200.0" prefHeight="402.0" prefWidth="800.0" style="-fx-background-color: #C5CAE9;">
+         <columns>
+            <TableColumn fx:id="firstName" prefWidth="75.0" style="-fx-background-color: #C5CAE9;" text="Student Id" />
+            <TableColumn fx:id="lastName" prefWidth="75.0" style="-fx-background-color: #C5CAE9;" text="Course Name" />
+            <TableColumn fx:id="origin" prefWidth="75.0" style="-fx-background-color: #C5CAE9;" text="Problem Type" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -22,7 +22,7 @@ public class Server {
                 clientThread.start();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
     }
 }

@@ -150,14 +150,14 @@ public class LoginPage implements Initializable {
 
         if (loginSuccessful) {
             try {
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter("check.txt"))) {
-                    // Append the student data to the file
-                    writer.write(mybox.getValue());
-                    writer.newLine();
-                    //System.out.println(studentId+" " +emailAddress+" " +password);
-                } catch (IOException e) {
-                    System.err.println("Error writing to file: " + e.getMessage());
-                }
+//                try (BufferedWriter writer = new BufferedWriter(new FileWriter("check.txt"))) {
+//                    // Append the student data to the file
+//                    writer.write(mybox.getValue());
+//                    writer.newLine();
+//                    //System.out.println(studentId+" " +emailAddress+" " +password);
+//                } catch (IOException e) {
+//                    System.err.println("Error writing to file: " + e.getMessage());
+//                }
 
 
                 goToHomePage(event);
@@ -168,7 +168,7 @@ public class LoginPage implements Initializable {
             showMessage("Invalid Information. Login failed.", "Login");
         }
     }
-        else{cid="faculty";
+        else{cid="Faculty";
             String mstudentId = studentid.getText();
             String mpassword = password.getText();
 
@@ -196,14 +196,14 @@ public class LoginPage implements Initializable {
             }
 
             if (loginSuccessful) {
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter("check.txt"))) {
-                    // Append the student data to the file
-                    writer.write(mybox.getValue());
-                    writer.newLine();
-                    //System.out.println(studentId+" " +emailAddress+" " +password);
-                } catch (IOException e) {
-                    System.err.println("Error writing to file: " + e.getMessage());
-                }
+//                try (BufferedWriter writer = new BufferedWriter(new FileWriter("check.txt"))) {
+//                    // Append the student data to the file
+//                    writer.write(mybox.getValue());
+//                    writer.newLine();
+//                    //System.out.println(studentId+" " +emailAddress+" " +password);
+//                } catch (IOException e) {
+//                    System.err.println("Error writing to file: " + e.getMessage());
+//                }
 
 
 

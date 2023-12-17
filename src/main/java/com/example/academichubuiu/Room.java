@@ -87,17 +87,7 @@ public class Room extends Thread implements Initializable {
     @FXML
     private Parent root;
 
-    @FXML
-    public void gotoThome (ActionEvent event) throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
-        root = fxmlLoader.load();
-        scene = new Scene(root);
 
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
 
 
 
@@ -112,27 +102,27 @@ public class Room extends Thread implements Initializable {
             e.printStackTrace();
         }
     }
-    public String someMethod() {
-        String check = null;
-        try (BufferedReader reader = new BufferedReader(new FileReader("Check.txt"))) {
-            String line;
-
-
-
-            while ((line = reader.readLine()) != null) {
-
-                check=line;
-
-            }
-
-        } catch (IOException e) {
-            System.err.println("Error reading from file: " + e.getMessage());
-        }
-
-
-        System.out.println("Check="+check);
-        return check; // Now you can use myboxValue as needed
-    }
+//    public String someMethod() {
+//        String check = null;
+//        try (BufferedReader reader = new BufferedReader(new FileReader("Check.txt"))) {
+//            String line;
+//
+//
+//
+//            while ((line = reader.readLine()) != null) {
+//
+//                check=line;
+//
+//            }
+//
+//        } catch (IOException e) {
+//            System.err.println("Error reading from file: " + e.getMessage());
+//        }
+//
+//
+//        System.out.println("Check="+check);
+//        return check; // Now you can use myboxValue as needed
+//    }
 
 
 
@@ -153,7 +143,7 @@ public class Room extends Thread implements Initializable {
                     fulmsg.append(tokens[i]);
                 }
                 System.out.println("fulmsg:"+fulmsg);
-                if (cmd.equalsIgnoreCase(LoginPage.cid + ":")) {
+                if (cmd.equalsIgnoreCase("Student" + ":")) {
                     System.out.println(LoginPage.cid);
                     continue;
                 } else if(fulmsg.toString().equalsIgnoreCase("bye")) {
@@ -190,8 +180,8 @@ public class Room extends Thread implements Initializable {
 
     public void setProfile() {
         for (User user : users) {
-            if (someMethod().equalsIgnoreCase(user.name)) {
-                fullName.setText(someMethod());
+            if ("Student".equalsIgnoreCase(user.name)) {
+                fullName.setText("Student");
                 fullName.setOpacity(1);
                 email.setText(null);
                 email.setOpacity(1);
@@ -300,7 +290,7 @@ public class Room extends Thread implements Initializable {
 //        }
             showProPic.setFill(new ImagePattern(image));
         }catch(Exception e){}
-        clientName.setText(someMethod());
+        clientName.setText("Student");
         System.out.println("after connect");
         connectSocket();
     }
