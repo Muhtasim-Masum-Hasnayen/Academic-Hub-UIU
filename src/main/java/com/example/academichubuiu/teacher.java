@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -65,6 +66,33 @@ public class teacher implements Initializable {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    public void timer(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StopWatch.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        //Stage stage = new Stage();
+//        stage.initStyle(StageStyle.UNDECORATED);
+//        stage.initStyle(StageStyle.TRANSPARENT);  // Set the style before making the stage visible
+        stage.setScene(scene);
+        stage.setResizable(false);
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+
+//        // Mouse drag functionality
+//        root.setOnMousePressed(mouseEvent -> {
+//            xOffset = mouseEvent.getSceneX();
+//            yOffset = mouseEvent.getSceneY();
+//        });
+//
+//        root.setOnMouseDragged(mouseEvent -> {
+//            stage.setX(mouseEvent.getScreenX() - xOffset);
+//            stage.setY(mouseEvent.getScreenY() - yOffset);
+//        });
+
+        stage.show();  // The stage is made visible after setting the style
     }
     @FXML
     public void goTologinpage(ActionEvent event) throws IOException

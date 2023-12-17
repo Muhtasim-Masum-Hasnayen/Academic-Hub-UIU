@@ -55,7 +55,7 @@
             </ImageView>
          </children>
       </HBox>
-      <Button layoutX="687.0" layoutY="555.0" mnemonicParsing="false" onAction="#gotohomepage" prefHeight="30.0" prefWidth="99.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+      <Button layoutX="686.0" layoutY="556.0" mnemonicParsing="false" onAction="#gotohomepage" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>

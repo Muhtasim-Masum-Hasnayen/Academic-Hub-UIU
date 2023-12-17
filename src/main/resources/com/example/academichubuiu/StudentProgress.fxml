@@ -28,7 +28,10 @@
       </Label>
       <TextField fx:id="txtname" layoutX="604.0" layoutY="203.0" prefHeight="26.0" prefWidth="120.0" />
       <TextField fx:id="txtmarks" layoutX="604.0" layoutY="239.0" prefHeight="26.0" prefWidth="120.0" />
-      <Button fx:id="btnAdd" layoutX="638.0" layoutY="284.0" mnemonicParsing="false" onAction="#OnAdd" text="Add" />
+      <Button fx:id="btnAdd" layoutX="623.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnAdd" prefHeight="3.0" prefWidth="81.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Add" textFill="#fff3f3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
       <ScrollPane layoutX="510.0" layoutY="363.0" prefHeight="172.0" prefWidth="218.0">
          <content>
             <TextArea fx:id="taChartDataDisplay" prefHeight="231.0" prefWidth="200.0" />
@@ -41,7 +44,7 @@
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c6bc0" height="600.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
       <Circle fill="#9fa8da" layoutX="71.0" layoutY="81.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-      <Button layoutX="686.0" layoutY="566.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gotoThome" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
+      <Button layoutX="678.0" layoutY="556.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gotoThome" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #424242; -fx-background-radius: 90;" text="Back" textFill="WHITE">
          <font>
             <Font name="Ebrima Bold" size="16.0" />
          </font>

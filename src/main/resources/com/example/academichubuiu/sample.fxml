@@ -61,11 +61,6 @@
             <Image url="@Logo_UIU_Academic_Hub-removebg-preview.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bookImage" fitHeight="179.0" fitWidth="233.0" layoutX="20.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@R%20(1).png" />
-         </image>
-      </ImageView>
       <Label layoutX="424.0" layoutY="159.0" text="Welcome to UIU Academic Hub">
          <font>
             <Font name="Impact" size="22.0" />
@@ -86,10 +81,5 @@
             <Font name="Bell MT Bold" size="17.0" />
          </font>
       </Text>
-      <ImageView fx:id="lightImage" fitHeight="150.0" fitWidth="172.0" layoutX="238.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@flashLight-removebg-preview.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
